@@ -15,3 +15,11 @@ C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debu
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+E:\FirstProject\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+E:\FirstProject\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.dll
+E:\FirstProject\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.pdb
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb

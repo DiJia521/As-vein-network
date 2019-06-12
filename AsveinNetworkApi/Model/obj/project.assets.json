@@ -1867,11 +1867,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\Model\\Model.csproj",
+      "projectUniqueName": "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\Model\\Model.csproj",
+      "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\黄斌虎\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\Model\\obj\\",
+      "outputPath": "E:\\FirstProject\\AsveinNetworkApi\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

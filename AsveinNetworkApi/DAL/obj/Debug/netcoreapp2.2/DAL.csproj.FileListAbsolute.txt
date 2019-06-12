@@ -25,3 +25,15 @@ C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.dll
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.pdb
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.deps.json
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.dll
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.pdb
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.dll
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.pdb
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfoInputs.cache
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
+E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb

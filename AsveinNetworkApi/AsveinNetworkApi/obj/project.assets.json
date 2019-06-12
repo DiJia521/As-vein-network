@@ -13037,11 +13037,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
+      "projectUniqueName": "E:\\FirstProject\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
       "projectName": "AsveinNetworkApi",
-      "projectPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
+      "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
       "packagesPath": "C:\\Users\\黄斌虎\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\AsveinNetworkApi\\obj\\",
+      "outputPath": "E:\\FirstProject\\AsveinNetworkApi\\AsveinNetworkApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13061,11 +13061,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\BLL\\BLL.csproj"
+            "E:\\FirstProject\\AsveinNetworkApi\\BLL\\BLL.csproj": {
+              "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\黄斌虎\\Source\\Repos\\As-vein-network2\\AsveinNetworkApi\\Model\\Model.csproj"
+            "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj": {
+              "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj"
             }
           }
         }
