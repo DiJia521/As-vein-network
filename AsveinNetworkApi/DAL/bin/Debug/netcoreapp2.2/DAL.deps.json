@@ -9,6 +9,7 @@
       "DAL/1.0.0": {
         "dependencies": {
           "Dapper": "1.60.6",
+          "Log": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
@@ -195,12 +196,28 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "Log/1.0.0": {
+        "dependencies": {
+          "log4net": "1.2.11.0"
+        },
+        "runtime": {
+          "ExamSystem.Log.dll": {}
+        }
+      },
       "Model/1.0.0": {
         "dependencies": {
           "Dapper": "1.60.6"
         },
         "runtime": {
           "Model.dll": {}
+        }
+      },
+      "log4net.Reference/1.2.11.0": {
+        "runtime": {
+          "log4net.dll": {
+            "assemblyVersion": "1.2.11.0",
+            "fileVersion": "1.2.11.0"
+          }
         }
       }
     }
@@ -344,8 +361,18 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
+    "Log/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Model/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "log4net.Reference/1.2.11.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

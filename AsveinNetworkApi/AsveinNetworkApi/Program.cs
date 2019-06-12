@@ -16,12 +16,8 @@ namespace AsveinNetworkApi
         public static void Main(string[] args)
         {
 
-            Logger.Info("qwere");
-
             CreateWebHostBuilder(args).Build().Run();
-
-         
-
+            
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

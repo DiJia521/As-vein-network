@@ -481,6 +481,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Dapper": "1.60.6",
+          "Log": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -488,6 +489,15 @@
         },
         "runtime": {
           "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "Log/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Log.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Log.dll": {}
         }
       },
       "Model/1.0.0": {
@@ -1884,6 +1894,11 @@
       "type": "project",
       "path": "../DAL/DAL.csproj",
       "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "Log/1.0.0": {
+      "type": "project",
+      "path": "../Log/Log.csproj",
+      "msbuildProject": "../Log/Log.csproj"
     },
     "Model/1.0.0": {
       "type": "project",

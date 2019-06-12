@@ -43,3 +43,6 @@ E:\项目\zhimaiwang\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyIn
 E:\项目\zhimaiwang\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CopyComplete
 E:\项目\zhimaiwang\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.dll
 E:\项目\zhimaiwang\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\ExamSystem.Log.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\log4net.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\ExamSystem.Log.pdb

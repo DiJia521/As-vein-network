@@ -37,3 +37,6 @@ E:\项目\zhimaiwang\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyIn
 E:\项目\zhimaiwang\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
 E:\项目\zhimaiwang\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
 E:\项目\zhimaiwang\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\ExamSystem.Log.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\log4net.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\ExamSystem.Log.pdb

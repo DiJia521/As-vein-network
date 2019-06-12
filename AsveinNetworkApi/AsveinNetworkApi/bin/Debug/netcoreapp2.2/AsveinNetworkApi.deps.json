@@ -635,6 +635,7 @@
       "DAL/1.0.0": {
         "dependencies": {
           "Dapper": "1.60.6",
+          "Log": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {

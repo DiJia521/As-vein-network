@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BLL;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using DAL;
+using Log;
 using Model;
-using Newtonsoft.Json;
 
-namespace AsveinNetworkApi.Controllers
+namespace BLL
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class LoginController : ControllerBase
+    public class LoginBll
     {
-        LoginBll bll = new LoginBll();
+        LoginDal dal = new LoginDal();
 
         /// <summary>
         /// 根据用户名，密码登录
@@ -22,10 +17,9 @@ namespace AsveinNetworkApi.Controllers
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        [HttpGet("{Name,pwd}",Name ="Get")]
         public UserLogin GetLogin(string Name, string pwd)
         {
-            return bll.GetLogin(Name, pwd);
+            return dal.GetLogin(Name, pwd);
         }
 
         /// <summary>
@@ -33,10 +27,9 @@ namespace AsveinNetworkApi.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        [HttpPost]
         public int Register(UserLogin user)
         {
-            return bll.Register(user);
+            return dal.Register(user);
         }
     }
 }

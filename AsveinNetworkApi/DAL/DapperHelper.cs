@@ -15,7 +15,7 @@ namespace DAL
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        private static readonly string connectionString = @"Server=DESKTOP-65JEFQR;Database=Recruitment;Trusted_Connection=true;User ID=sa;Password=123456;";
+        private static readonly string connectionString = @"Data Source=DESKTOP-65JEFQR;Initial Catalog=Recruitment;User ID=sa;Password=123456;";
 
 
         
