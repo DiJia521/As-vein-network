@@ -44,5 +44,6 @@ namespace AsveinNetworkApi
             app.UseHttpsRedirection();
             app.UseMvc();
         }
+        
     }
 }

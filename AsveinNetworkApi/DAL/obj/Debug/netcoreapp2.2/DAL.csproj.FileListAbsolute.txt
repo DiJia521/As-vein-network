@@ -37,3 +37,6 @@ E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
 E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
 E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
 E:\FirstProject\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\ExamSystem.Log.dll
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\log4net.dll
+E:\FirstProject\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\ExamSystem.Log.pdb

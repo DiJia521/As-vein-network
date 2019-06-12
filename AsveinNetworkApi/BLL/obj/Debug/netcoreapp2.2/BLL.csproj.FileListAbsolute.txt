@@ -43,3 +43,6 @@ E:\FirstProject\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyInfo.cs
 E:\FirstProject\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CopyComplete
 E:\FirstProject\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.dll
 E:\FirstProject\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.pdb
+E:\FirstProject\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\ExamSystem.Log.dll
+E:\FirstProject\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\log4net.dll
+E:\FirstProject\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\ExamSystem.Log.pdb

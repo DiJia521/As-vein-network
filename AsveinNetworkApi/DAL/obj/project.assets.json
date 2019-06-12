@@ -476,6 +476,15 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "Log/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Log.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Log.dll": {}
+        }
+      },
       "Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -1866,6 +1875,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Log/1.0.0": {
+      "type": "project",
+      "path": "../Log/Log.csproj",
+      "msbuildProject": "../Log/Log.csproj"
+    },
     "Model/1.0.0": {
       "type": "project",
       "path": "../Model/Model.csproj",
@@ -1875,6 +1889,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Dapper >= 1.60.6",
+      "Log >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Model >= 1.0.0"
     ]
@@ -1910,6 +1925,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "E:\\FirstProject\\AsveinNetworkApi\\Log\\Log.csproj": {
+              "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\Log\\Log.csproj"
+            },
             "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj": {
               "projectPath": "E:\\FirstProject\\AsveinNetworkApi\\Model\\Model.csproj"
             }

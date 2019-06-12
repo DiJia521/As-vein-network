@@ -20,11 +20,7 @@ namespace Model
         /// 用户密码
         /// </summary>
         public string U_Pwd { get; set; }
-
-        /// <summary>
-        /// 用户电话
-        /// </summary>
-        public string U_Phone { get; set; }
+        
 
         /// <summary>
         /// 用户权限

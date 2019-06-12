@@ -62,3 +62,5 @@ E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\Asvein
 E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.csproj.CopyComplete
 E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.dll
 E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.pdb
+E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\ExamSystem.Log.dll
+E:\FirstProject\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\ExamSystem.Log.pdb

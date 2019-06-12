@@ -6,22 +6,70 @@ namespace Model
 {
     public class Resumes
     {
-        public int R_Id { get; set; }  //id
-        public string R_Name { get; set; } //姓名
-        public int R_Age { get; set; }  //年龄
-        public string R_Phone { get; set; }  //电话
-        public string R_Address { get; set; }  //住址
-        public string R_Email { get; set; } //邮箱
-        public int R_Experience { get; set; }  //经验()年
-        public string R_Picture { get; set; } //照片
-        public string R_Occupation { get; set; } //从事职业
-        public string R_Salary { get; set; } //期望薪资
-        public string R_School { get; set; } //学校名称
-        public string R_Studyingtime { get; set; } //就读时间
-        public string R_Major { get; set; } //所学专业
-        public string R_Degree { get; set; } //学历学位
-        public string R_WorkExperience { get; set; } //工作经历
-        public string R_Selfevaluation { get; set; } //自我评价
+        /// <summary>
+        /// id
+        /// </summary>
+        public int R_Id { get; set; } 
+        /// <summary>
+        /// 姓名
+        /// </summary>
+        public string R_Name { get; set; } 
+        /// <summary>
+        /// 年龄
+        /// </summary>
+        public int R_Age { get; set; }  
+        /// <summary>
+        /// 电话
+        /// </summary>
+        public string R_Phone { get; set; } 
+        /// <summary>
+        /// 住址
+        /// </summary>
+        public string R_Address { get; set; }  
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        public string R_Email { get; set; } 
+        /// <summary>
+        /// 经验()年
+        /// </summary>
+        public int R_Experience { get; set; }  
+        /// <summary>
+        /// 照片
+        /// </summary>
+        public string R_Picture { get; set; } 
+        /// <summary>
+        /// 从事职业
+        /// </summary>
+        public string R_Occupation { get; set; }
+        /// <summary>
+        /// 期望薪资
+        /// </summary>
+        public string R_Salary { get; set; } 
+        /// <summary>
+        /// 学校名称
+        /// </summary>
+        public string R_School { get; set; } 
+        /// <summary>
+        /// 就读时间
+        /// </summary>
+        public string R_Studyingtime { get; set; } 
+        /// <summary>
+        /// 所学专业
+        /// </summary>
+        public string R_Major { get; set; } 
+        /// <summary>
+        /// 学历学位
+        /// </summary>
+        public string R_Degree { get; set; } 
+        /// <summary>
+        /// 工作经历
+        /// </summary>
+        public string R_WorkExperience { get; set; } 
+        /// <summary>
+        /// 自我评价
+        /// </summary>
+        public string R_Selfevaluation { get; set; } 
         
     }
 }
