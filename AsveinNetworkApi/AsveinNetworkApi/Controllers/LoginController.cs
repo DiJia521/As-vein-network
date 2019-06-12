@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace AsveinNetworkApi.Controllers
 {
@@ -11,5 +12,6 @@ namespace AsveinNetworkApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
+        
     }
 }

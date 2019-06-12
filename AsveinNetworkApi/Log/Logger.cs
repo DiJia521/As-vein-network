@@ -1,5 +1,8 @@
-﻿using System;
+﻿using log4net;
+using log4net.Config;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,43 +12,57 @@ namespace Log
     /// <summary>
     /// 写Log日志的公共类.
     /// </summary>
-    public static class Logger
+    public class Logger
     {
-        private static readonly object lockObj = new object();
+        private static ILog logger;
+        static Logger()
+        {
+            if (logger == null)
+            {
+                var repository = LogManager.CreateRepository("NETCoreRepository");
+                //log4net从log4net.config文件中读取配置信息
+                XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
+                logger = LogManager.GetLogger(repository.Name, "InfoLogger");
+            }
+        }
 
         /// <summary>
-        /// 打印错误日志
+        /// 普通日志
         /// </summary>
-        /// <param name="exception"></param>
         /// <param name="message"></param>
-        public static void LogError(this Exception exception, string message = "")
+        /// <param name="exception"></param>
+        public static void Info(string message, Exception exception = null)
         {
-            if (string.IsNullOrEmpty(message))
-            {
-                FileLogService.Instance.Error(exception);
-            }
+            if (exception == null)
+                logger.Info(message);
             else
-            {
-                FileLogService.Instance.Error(message, exception);
-            }
+                logger.Info(message, exception);
         }
 
         /// <summary>
-        /// 获取日志实例
+        /// 告警日志
         /// </summary>
-        public static FileLogService GetInstance() => FileLogService.Instance;
-
-        /// <summary>
-        /// 获取日志实例
-        /// </summary>
-        /// <param name="logService"></param>
-        /// <returns></returns>
-        public static ILogService GetLogger(this ILogService logService)
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public static void Warn(string message, Exception exception = null)
         {
-            logService = FileLogService.Instance;
-
-            return logService;
+            if (exception == null)
+                logger.Warn(message);
+            else
+                logger.Warn(message, exception);
         }
 
+        /// <summary>
+        /// 错误日志
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public static void Error(string message, Exception exception = null)
+        {
+            if (exception == null)
+                logger.Error(message);
+            else
+                logger.Error(message, exception);
+        }
     }
 }

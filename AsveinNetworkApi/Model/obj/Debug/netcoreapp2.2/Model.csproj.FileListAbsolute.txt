@@ -15,3 +15,12 @@ C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debu
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
