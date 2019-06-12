@@ -11,5 +11,7 @@ namespace AsveinNetworkApi.Controllers
     [ApiController]
     public class SumersController : ControllerBase
     {
+        public string name { get; set; }
+        
     }
 }
