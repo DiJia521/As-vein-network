@@ -13,3 +13,15 @@ D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.Assem
 D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
 D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
 D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfoInputs.cache
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.deps.json
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.dll
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete

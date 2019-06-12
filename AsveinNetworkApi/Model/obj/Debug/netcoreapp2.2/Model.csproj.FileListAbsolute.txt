@@ -7,3 +7,11 @@ D:\大一\每日练习题\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.A
 D:\大一\每日练习题\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 D:\大一\每日练习题\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 D:\大一\每日练习题\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\黄斌虎\Source\Repos\As-vein-network2\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
