@@ -1,0 +1,17 @@
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\BLL.deps.json
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\BLL.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\BLL.pdb
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\DAL.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\Dapper.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\Model.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\DAL.pdb
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\Model.pdb
+D:\大一\每日练习题\AsveinNetworkApi\BLL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.xml
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.csprojAssemblyReference.cache
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CoreCompileInputs.cache
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyInfoInputs.cache
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyInfo.cs
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CopyComplete
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.dll
+D:\大一\每日练习题\AsveinNetworkApi\BLL\obj\Debug\netcoreapp2.2\BLL.pdb

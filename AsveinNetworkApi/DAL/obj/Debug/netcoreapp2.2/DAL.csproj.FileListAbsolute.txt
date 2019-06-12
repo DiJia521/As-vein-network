@@ -1,0 +1,15 @@
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.deps.json
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.dll
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\DAL.pdb
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Dapper.dll
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.dll
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.dll
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\Model.pdb
+D:\大一\每日练习题\AsveinNetworkApi\DAL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.xml
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfoInputs.cache
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.dll
+D:\大一\每日练习题\AsveinNetworkApi\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
