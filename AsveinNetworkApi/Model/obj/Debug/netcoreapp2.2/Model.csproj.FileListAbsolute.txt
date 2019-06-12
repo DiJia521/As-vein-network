@@ -23,3 +23,4 @@ E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInf
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache

@@ -11,3 +11,4 @@ E:\FirstProject\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CoreCompileInputs.cach
 E:\FirstProject\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CopyComplete
 E:\FirstProject\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.dll
 E:\FirstProject\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.pdb
+E:\FirstProject\AsveinNetworkApi\Log\obj\Debug\Log.csprojAssemblyReference.cache
