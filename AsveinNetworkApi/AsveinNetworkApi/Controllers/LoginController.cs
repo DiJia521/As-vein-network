@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BLL;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model;
@@ -16,16 +17,23 @@ namespace AsveinNetworkApi.Controllers
     {
         LoginBll bll = new LoginBll();
 
+        [HttpGet]
+        public ActionResult<string> Get(string UserName,string pwd)
+        {
+            return "value";
+        }
         /// <summary>
         /// 根据用户名，密码登录
         /// </summary>
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        [HttpGet("{Name,pwd}",Name ="Get")]
-        public UserLogin GetLogin(string Name, string pwd)
+        [HttpGet("{userName,pwd}",Name ="Get")]
+        [Produces("application/json")]
+        [EnableCors("any")]
+        public List<UserLogin> GetLogin(string userName, string pwd)
         {
-            return bll.GetLogin(Name, pwd);
+            return bll.GetLogin(userName, pwd);
         }
 
         /// <summary>

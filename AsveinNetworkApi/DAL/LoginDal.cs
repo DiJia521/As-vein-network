@@ -30,14 +30,14 @@ namespace DAL
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        public UserLogin GetLogin(string Name, string pwd)
+        public List<UserLogin> GetLogin(string Name, string pwd)
         {
-            UserLogin list = null;
+            List<UserLogin> list = null;
 
             try
             {
                 string str = "select * from UserLogin where U_Name = @U_Name and U_Pwd = @U_Pwd ";
-                list = DapperHelper<UserLogin>.QuerySingle(str, new { U_Name = Name, U_Pwd = pwd });
+                list = DapperHelper<UserLogin>.Query(str, new { U_Name = Name, U_Pwd = pwd });
             }
             catch(Exception e)
             {

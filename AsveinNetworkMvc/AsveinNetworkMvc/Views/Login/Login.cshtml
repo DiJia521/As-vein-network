@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input id="txtName" type="text" name="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input id="txtPwd" type="text" name="Pwd" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Button1" type="button" value="登录" onclick="Login()" />
+                </td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+
+<script>
+    function Login() {
+        var name = $("#txtName").val();
+        var pwd = $("#txtPwd").val();
+        $.ajax({
+            url: "https://localhost:44370/api/login/GetLogin",
+            data: { "userName": name, "pwd": pwd },
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                if (date > 0) {
+                    alert("登录成功");
+                }
+                else {
+                    alert("登录失败");
+                }
+            }
+        })
+    }
+</script>

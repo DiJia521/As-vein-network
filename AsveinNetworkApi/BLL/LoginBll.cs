@@ -17,7 +17,7 @@ namespace BLL
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        public UserLogin GetLogin(string Name, string pwd)
+        public List<UserLogin> GetLogin(string Name, string pwd)
         {
             return dal.GetLogin(Name, pwd);
         }
