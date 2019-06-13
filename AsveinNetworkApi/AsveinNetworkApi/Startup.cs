@@ -26,12 +26,15 @@ namespace AsveinNetworkApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
             services.AddCors(options => {
                 options.AddPolicy("any", builder => {
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
                            .AllowAnyHeader()
-                           .AllowCredentials();
+                           //.AllowCredentials()
+                           .DisallowCredentials()
+                           .SetIsOriginAllowed(s => true);
                 });
             });
         }
@@ -50,6 +53,7 @@ namespace AsveinNetworkApi
             }
 
             app.UseHttpsRedirection();
+            
             app.UseMvc();
         }
         

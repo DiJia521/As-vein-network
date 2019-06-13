@@ -13,6 +13,7 @@ namespace AsveinNetworkApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("any")]
     public class LoginController : ControllerBase
     {
         LoginBll bll = new LoginBll();
@@ -21,6 +22,11 @@ namespace AsveinNetworkApi.Controllers
         public ActionResult<string> Get(string UserName,string pwd)
         {
             return "value";
+        }
+        [HttpPost]
+        public int Post(UserLogin user)
+        {
+            return 1;
         }
         /// <summary>
         /// 根据用户名，密码登录
@@ -41,8 +47,12 @@ namespace AsveinNetworkApi.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        [HttpPost]
-        public int Register(UserLogin user)
+        //Post api/Login
+        [HttpPost("PostRegister")]
+        //[Route("/PostRegister")]
+        //[Produces("application/json")]
+        [EnableCors("any")]
+        public int PostRegister(UserLogin user)
         {
             return bll.Register(user);
         }

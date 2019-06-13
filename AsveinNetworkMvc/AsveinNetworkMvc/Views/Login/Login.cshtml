@@ -12,6 +12,7 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/md5.js"></script>
 </head>
 <body>
     @using (Html.BeginForm())
@@ -20,13 +21,13 @@
             <tr>
                 <td>用户名：</td>
                 <td>
-                    <input id="txtName" type="text" name="Name" />
+                    <input id="txtName" type="text" name="U_Name" />
                 </td>
             </tr>
             <tr>
                 <td>密码：</td>
                 <td>
-                    <input id="txtPwd" type="text" name="Pwd" />
+                    <input id="txtPwd" type="password" name="U_Pwd" />
                 </td>
             </tr>
             <tr>
@@ -43,18 +44,19 @@
 <script>
     function Login() {
         var name = $("#txtName").val();
-        var pwd = $("#txtPwd").val();
+        var pwd = hex_md5($("#txtPwd").val());
         $.ajax({
             url: "https://localhost:44370/api/login/GetLogin",
             data: { "userName": name, "pwd": pwd },
             type: "get",
             contentType: "application/json",
             success: function (data) {
-                if (date > 0) {
+                if (data != null) {
                     alert("登录成功");
                 }
                 else {
-                    alert("登录失败");
+                    alert("用户名或密码错误,请重新输入");
+                    location.href="/Login/Login"
                 }
             }
         })

@@ -63,3 +63,4 @@ E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\A
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.dll
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.pdb
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Login\Login.g.cshtml.cs
+E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Login\RegisterInto.g.cshtml.cs
