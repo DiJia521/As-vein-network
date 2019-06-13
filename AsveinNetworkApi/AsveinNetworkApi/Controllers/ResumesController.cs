@@ -14,6 +14,7 @@ namespace AsveinNetworkApi.Controllers
     {
         ResumesBll bll = new ResumesBll();
         //显示
+        [HttpGet]
         public List<Resumes> GetResumes()
         {
             return bll.GetResumes();

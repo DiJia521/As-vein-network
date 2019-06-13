@@ -8,7 +8,10 @@ namespace DAL
 {
     public class ResumesDal
     {
-        //显示
+        /// <summary>
+        /// 显示显示简历信息
+        /// </summary>
+        /// <returns></returns>
         public List<Resumes> GetResumes()
         {
             List<Resumes> list = null;
@@ -24,5 +27,7 @@ namespace DAL
 
             return list;
         }
+
+       
     }
 }
