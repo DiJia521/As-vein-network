@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Model.AsveinNetwork>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>AsveinNetwork</h1>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @item.Join_Recruitment
+            </li>
+            <li>
+                @item.join_Seeker
+            </li>
+        }
+    </ul>
+
+</body>
+</html>

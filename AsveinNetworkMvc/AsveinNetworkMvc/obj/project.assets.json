@@ -13001,11 +13001,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\AsveinNetworkMvc\\AsveinNetworkMvc.csproj",
+      "projectUniqueName": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkMvc\\AsveinNetworkMvc\\AsveinNetworkMvc.csproj",
       "projectName": "AsveinNetworkMvc",
-      "projectPath": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\AsveinNetworkMvc\\AsveinNetworkMvc.csproj",
+      "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkMvc\\AsveinNetworkMvc\\AsveinNetworkMvc.csproj",
       "packagesPath": "C:\\Users\\贾晓东\\.nuget\\packages\\",
-      "outputPath": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\AsveinNetworkMvc\\obj\\",
+      "outputPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkMvc\\AsveinNetworkMvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13026,8 +13026,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\大一\\每日练习题\\AsveinNetworkMvc\\Model\\Model.csproj": {
-              "projectPath": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\Model\\Model.csproj"
+            "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkMvc\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkMvc\\Model\\Model.csproj"
             }
           }
         }
