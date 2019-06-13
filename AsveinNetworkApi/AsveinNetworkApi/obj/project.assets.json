@@ -13920,11 +13920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
+      "projectUniqueName": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
       "projectName": "AsveinNetworkApi",
-      "projectPath": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
+      "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\AsveinNetworkApi.csproj",
       "packagesPath": "C:\\Users\\贾晓东\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\obj\\",
+      "outputPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\AsveinNetworkApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13945,14 +13945,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\BLL\\BLL.csproj"
+            "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\Log\\Log.csproj": {
-              "projectPath": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\Log\\Log.csproj"
+            "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Log\\Log.csproj": {
+              "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Log\\Log.csproj"
             },
-            "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\贾晓东\\source\\repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj"
+            "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj"
             }
           }
         }
