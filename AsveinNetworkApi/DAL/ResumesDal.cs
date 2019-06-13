@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using System.Text;
 using Model;
-
 using Log;
+
 namespace DAL
 {
     public class ResumesDal
     {
-        //显示
+        /// <summary>
+        /// 显示简历信息
+        /// </summary>
+        /// <returns></returns>
         public List<Resumes> GetResumes()
         {
-            List<Resumes> list = null;
+            List<Resumes> str = null;
             try
             {
-                string str = string.Format("select * from Resumes");
-                list = DapperHelper<Resumes>.Query(str, null);
+                string sql = string.Format("select * from Resumes");
+                str = DapperHelper<Resumes>.Query(sql, null);
             }
             catch (Exception e)
             {
-                Logger.Error("查询错误");
+                Logger.Error("404");
             }
 
-            return list;
+            return str;
         }
     }
 }

@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AsveinNetworkApi",
-    "\\AsveinNetworkApi\\AsveinNetworkApi",
-    "\\AsveinNetworkApi\\AsveinNetworkApi\\Controllers"
+    "\\AsveinNetworkApi"
   ],
+  "SelectedNode": "\\AsveinNetworkApi\\AsveinNetworkApi.sln",
   "PreviewInSolutionExplorer": false
 }

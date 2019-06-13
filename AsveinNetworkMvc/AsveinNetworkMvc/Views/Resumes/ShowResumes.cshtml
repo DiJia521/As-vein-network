@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowResumes</title>
+</head>
+<body>
+    <div>
+        <p>@DateTime.Now</p>
+        @*头部部分*@
+        <table style="background-color:#0ce8f6; margin:0 auto" >
+            <tr>
+                
+                <td>
+                    <img src="~/imgs/1.jpg" /> 
+                </td>
+                <td>
+                    <ul>
+                        <li>姓名:<input id="Text1" type="text" value="张三" /></li>
+                    </ul>
+                    <ul>
+                        <li>电话:<input id="Text1" type="text" value="13456897895" /></li>
+                    </ul>
+                    <ul>
+                        <li>邮箱:<input id="Text1" type="text" value="10086@qq.com" /></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>年龄:<input id="Text1" type="text" value="23" /></li>
+                    </ul>
+                    <ul>
+                        <li>住址:<input id="Text1" type="text" value="北京市" /></li>
+                    </ul>
+                    <ul>
+                        <li>工作经验:<input id="Text1" type="text" value="7年" /></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        @*主体部分*@
+        <table style="background-color:#00ffc8; margin:0 auto">
+            <tr>
+                <td><h2 style="background-color:#03de73">求职意向</h2></td>
+            </tr>
+            <tr>
+                <td>从事职业:<input id="Text1" type="text" value="高级财务" /></td>
+                <td>期望月薪:<input id="Text1" type="text" value="20K-30K" /></td>
+            </tr>
+            <tr>
+                <td><h2 style="background-color:#03de73">教育背景</h2></td>
+            </tr>
+            <tr>
+                <td>学校名称:<input id="Text1" type="text" value="南京大学" /></td>
+                <td>就读时间:<input id="Text1" type="text" value="2017.10-2019.9" /></td>
+                <td>所学专业:<input id="Text1" type="text" value="计算机" /></td>
+                <td>学历学位:<input id="Text1" type="text" value="硕士学位" /></td>
+            </tr>
+            <tr>
+                <td><h2 style="background-color:#03de73">证书</h2></td>
+            </tr>
+            <tr>
+                <td><input id="Text1" type="text" value="2009.6 中国计算机8级" /></td>
+            </tr>
+            <tr>
+                <td><h2 style="background-color:#03de73">工作经历</h2></td>
+            </tr>
+            <tr>
+                <td><textarea id="TextArea1" rows="2" cols="20">大家好,我是xxx,我  我  我 有点紧张啊</textarea></td>
+            </tr>
+            <tr>
+                <td><h2 style="background-color:#03de73">自我评价</h2></td>
+            </tr>
+            <tr>
+                <td><textarea id="TextArea1" rows="2" cols="20"> 萨达是不打算打把萨达姆啥的吧啥大事控件的</textarea></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

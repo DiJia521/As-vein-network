@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BLL;
 using Model;
+
 namespace AsveinNetworkApi.Controllers
 {
     [Route("api/[controller]")]
@@ -13,7 +14,11 @@ namespace AsveinNetworkApi.Controllers
     public class ResumesController : ControllerBase
     {
         ResumesBll bll = new ResumesBll();
-        //显示
+        /// <summary>
+        /// 显示简历信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public List<Resumes> GetResumes()
         {
             return bll.GetResumes();
