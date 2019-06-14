@@ -97,3 +97,8 @@ E:\FirstProject\Items\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\
 E:\FirstProject\Items\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.dll
 E:\FirstProject\Items\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.pdb
 E:\FirstProject\Items\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Resumes\ShowResumes.g.cshtml.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\CompanyManage\AddCompany.g.cshtml.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\CompanyManage\SeadEmail.g.cshtml.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Login\Login.g.cshtml.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Login\RegisterInto.g.cshtml.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\Resumes\ShowResumes.g.cshtml.cs
