@@ -33,6 +33,7 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "Model": "1.0.0",
+          "PublicClass": "1.0.0",
           "log4net": "2.0.8"
         },
         "runtime": {
@@ -718,6 +719,17 @@
         },
         "compile": {
           "Model.dll": {}
+        }
+      },
+      "PublicClass/1.0.0": {
+        "dependencies": {
+          "Dapper": "1.60.6"
+        },
+        "runtime": {
+          "PublicClass.dll": {}
+        },
+        "compile": {
+          "PublicClass.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.2.0": {
@@ -4180,6 +4192,11 @@
       "sha512": ""
     },
     "Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PublicClass/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

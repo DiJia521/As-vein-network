@@ -32,3 +32,4 @@ C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\obj\Debu
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache

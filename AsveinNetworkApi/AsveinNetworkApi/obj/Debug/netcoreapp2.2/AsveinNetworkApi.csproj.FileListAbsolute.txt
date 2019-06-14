@@ -87,3 +87,7 @@ C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkA
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.csproj.CopyComplete
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkApi\obj\Debug\netcoreapp2.2\AsveinNetworkApi.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\PublicClass.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\PublicClass.pdb
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\PublicClass.dll
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\AsveinNetworkApi\bin\Debug\netcoreapp2.2\PublicClass.pdb

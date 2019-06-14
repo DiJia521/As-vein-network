@@ -5126,6 +5126,19 @@
         "runtime": {
           "bin/placeholder/Model.dll": {}
         }
+      },
+      "PublicClass/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Dapper": "1.60.6"
+        },
+        "compile": {
+          "bin/placeholder/PublicClass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicClass.dll": {}
+        }
       }
     }
   },
@@ -13971,6 +13984,11 @@
       "type": "project",
       "path": "../Model/Model.csproj",
       "msbuildProject": "../Model/Model.csproj"
+    },
+    "PublicClass/1.0.0": {
+      "type": "project",
+      "path": "../PublicClass/PublicClass.csproj",
+      "msbuildProject": "../PublicClass/PublicClass.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13984,6 +14002,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
       "Model >= 1.0.0",
+      "PublicClass >= 1.0.0",
       "log4net >= 2.0.8"
     ]
   },
@@ -14027,6 +14046,9 @@
             },
             "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\Model\\Model.csproj"
+            },
+            "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\PublicClass\\PublicClass.csproj": {
+              "projectPath": "C:\\Users\\贾晓东\\Source\\Repos\\As-vein-network3\\AsveinNetworkApi\\PublicClass\\PublicClass.csproj"
             }
           }
         }

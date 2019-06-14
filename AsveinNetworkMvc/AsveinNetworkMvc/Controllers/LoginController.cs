@@ -12,12 +12,12 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace AsveinNetworkMvc.Controllers
 {
     public class LoginController : Controller
     {
-
         public IActionResult Index()
         {
             return View();
@@ -53,6 +53,7 @@ namespace AsveinNetworkMvc.Controllers
             DefaultProfile.AddEndpoint("cn-hangzhou", "cn-hangzhou", product, domain);
             IAcsClient acsClient = new DefaultAcsClient(profile);
             SendSmsRequest request = new SendSmsRequest();
+            string intString = "";
             try
             {
                 //必填:待发送手机号。支持以逗号分隔的形式进行批量调用，批量上限为1000个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式，发送国际/港澳台消息时，接收号码格式为00+国际区号+号码，如“0085200000000”
@@ -63,11 +64,11 @@ namespace AsveinNetworkMvc.Controllers
                 request.TemplateCode = "SMS_167396911";
                 //可选:模板中的变量替换JSON串,如模板内容为"亲爱的${name},您的验证码为${code}"时,此处的值为
                 Random random = new Random(Guid.NewGuid().GetHashCode());
-                string intString = random.Next(1000, 9999).ToString();
+                intString = random.Next(1000, 9999).ToString();
                 request.TemplateParam = "{\"code\":" + intString + "}";
 
                 HttpContext.Session.SetString("Yzm", intString);
-
+               
                 //可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者
                 //request.OutId = "yourOutId";
                 //请求失败这里会抛ClientException异常
@@ -83,10 +84,9 @@ namespace AsveinNetworkMvc.Controllers
             {
                 System.Console.WriteLine("Hello World！");
             }
+            
 
-            bool result = true;
-
-            return Json(result);
+            return Json(intString);
         }
     }
 }
