@@ -24,3 +24,12 @@ E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInf
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
 E:\FirstProject\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\Administrator\Desktop\本月项目\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb

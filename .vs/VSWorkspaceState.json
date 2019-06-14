@@ -3,7 +3,9 @@
     "",
     "\\AsveinNetworkApi",
     "\\AsveinNetworkApi\\AsveinNetworkApi",
-    "\\AsveinNetworkApi\\AsveinNetworkApi\\Controllers"
+    "\\AsveinNetworkApi\\AsveinNetworkApi\\Controllers",
+    "\\AsveinNetworkApi\\Model"
   ],
+  "SelectedNode": "\\AsveinNetworkApi\\Model\\obj",
   "PreviewInSolutionExplorer": false
 }
