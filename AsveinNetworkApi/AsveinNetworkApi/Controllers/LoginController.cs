@@ -14,7 +14,7 @@ namespace AsveinNetworkApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("any")]
+    [EnableCors("AllowSameDomain")]
     public class LoginController : ControllerBase
     {
         LoginBll bll = new LoginBll();
@@ -36,8 +36,6 @@ namespace AsveinNetworkApi.Controllers
         /// <param name="pwd">密码</param>
         /// <returns></returns>
         [HttpGet("{userName,pwd}",Name ="Get")]
-        [Produces("application/json")]
-        [EnableCors("any")]
         public List<UserLogin> GetLogin(string userName, string pwd)
         {
             return bll.GetLogin(userName, pwd);
@@ -50,9 +48,6 @@ namespace AsveinNetworkApi.Controllers
         /// <returns></returns>
         //Post api/Login
         [HttpPost("PostRegister")]
-        //[Route("/PostRegister")]
-        //[Produces("application/json")]
-        [EnableCors("any")]
         public int PostRegister([FromBody] UserLogin user)
         {
             return bll.Register(user);
