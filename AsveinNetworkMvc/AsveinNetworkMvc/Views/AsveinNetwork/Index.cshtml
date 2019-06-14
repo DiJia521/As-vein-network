@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Model.AsveinNetwork>
+﻿@model List<Model.AsveinNetwork>
+
 @{
     Layout = null;
 }
@@ -11,18 +12,24 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>AsveinNetwork</h1>
-    <ul>
+    <h1>As vein network</h1>
+    <link href="~/ContentSSS/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/ContentSSS/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <table>
+        <tr>
+            <td>招聘</td>
+            <td>求职者</td>
+        </tr>
         @foreach (var item in Model)
         {
-            <li>
-                @item.Join_Recruitment
-            </li>
-            <li>
-                @item.join_Seeker
-            </li>
+            <tr>
+                <td>@item.Join_Recruitment</td>
+                <td>@item.join_Seeker</td>
+            </tr>
         }
-    </ul>
-
+    </table>
+    <div>
+    </div>
 </body>
 </html>
