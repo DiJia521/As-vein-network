@@ -23,5 +23,16 @@ namespace AsveinNetworkApi.Controllers
         {
             return bll.GetResumes();
         }
+        /// <summary>
+        /// 添加数据信息 
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public int AddResumes(Resumes res)
+        {
+            return bll.AddResumes(res);
+
+        }
     }
 }

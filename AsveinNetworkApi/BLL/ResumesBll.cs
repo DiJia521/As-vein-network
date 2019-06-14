@@ -16,5 +16,14 @@ namespace BLL
         {
             return dal.GetResumes();
         }
+        /// <summary>
+        /// 添加数据信息 
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
+        public int AddResumes(Resumes res)
+        {
+            return dal.AddResumes(res);
+        }
     }
 }
