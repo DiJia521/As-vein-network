@@ -133,3 +133,5 @@ E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\A
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.csproj.CopyComplete
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.dll
 E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\AsveinNetworkMvc.pdb
+E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\CompanyManage\AddCompany.g.cshtml.cs
+E:\项目\zhimaiwang\AsveinNetworkMvc\AsveinNetworkMvc\obj\Debug\netcoreapp2.2\Razor\Views\CompanyManage\SeadEmail.g.cshtml.cs

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsveinNetworkMvc", "AsveinNetworkMvc\AsveinNetworkMvc.csproj", "{6E57BF2E-F0ED-43AF-AA29-15D32BBABA3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsveinNetworkMvc", "AsveinNetworkMvc\AsveinNetworkMvc.csproj", "{6E57BF2E-F0ED-43AF-AA29-15D32BBABA3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{4E0E3694-0BB5-4CAE-A701-200E9A022734}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{4E0E3694-0BB5-4CAE-A701-200E9A022734}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

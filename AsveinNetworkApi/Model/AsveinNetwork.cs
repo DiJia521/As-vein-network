@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Model
 {
     public class AsveinNetwork
