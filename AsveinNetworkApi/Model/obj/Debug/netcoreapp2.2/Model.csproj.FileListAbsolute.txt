@@ -23,7 +23,6 @@ E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.Assemb
 E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.dll
 E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.pdb
-E:\项目\zhimaiwang\AsveinNetworkApi\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.deps.json
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Model\bin\Debug\netcoreapp2.2\Model.pdb
