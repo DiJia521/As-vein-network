@@ -10,3 +10,4 @@ C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CopyComplete
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.pdb
+C:\Users\贾晓东\source\repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\Log.csprojAssemblyReference.cache
