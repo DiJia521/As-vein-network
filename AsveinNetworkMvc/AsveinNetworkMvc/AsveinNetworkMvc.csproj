@@ -5,35 +5,10 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="ContentSSS\ueditor1_4_3_3-utf8-net\uesditor1_4_3_3\net\net.sln" />
-    <None Include="ContentSSS\zTree_v3\.git\config" />
-    <None Include="ContentSSS\zTree_v3\.git\description" />
-    <None Include="ContentSSS\zTree_v3\.git\HEAD" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\applypatch-msg.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\commit-msg.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\post-update.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\pre-applypatch.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\pre-commit.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\pre-push.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\pre-rebase.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\pre-receive.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\prepare-commit-msg.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\hooks\update.sample" />
-    <None Include="ContentSSS\zTree_v3\.git\index" />
-    <None Include="ContentSSS\zTree_v3\.git\info\exclude" />
-    <None Include="ContentSSS\zTree_v3\.git\logs\HEAD" />
-    <None Include="ContentSSS\zTree_v3\.git\logs\refs\heads\master" />
-    <None Include="ContentSSS\zTree_v3\.git\logs\refs\remotes\origin\HEAD" />
-    <None Include="ContentSSS\zTree_v3\.git\objects\pack\pack-7dbac98fda2868af02939a40c632e449a20c269f.idx" />
-    <None Include="ContentSSS\zTree_v3\.git\objects\pack\pack-7dbac98fda2868af02939a40c632e449a20c269f.pack" />
-    <None Include="ContentSSS\zTree_v3\.git\packed-refs" />
-    <None Include="ContentSSS\zTree_v3\.git\refs\heads\master" />
-    <None Include="ContentSSS\zTree_v3\.git\refs\remotes\origin\HEAD" />
-  </ItemGroup>
-
 
   <ItemGroup>
+    <PackageReference Include="aliyun-net-sdk-core" Version="1.3.6" />
+    <PackageReference Include="aliyun-net-sdk-dysmsapi" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
@@ -42,12 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="ContentSSS\zTree_v3\.git\objects\info\" />
-    <Folder Include="ContentSSS\zTree_v3\.git\refs\tags\" />
   </ItemGroup>
 
 </Project>
