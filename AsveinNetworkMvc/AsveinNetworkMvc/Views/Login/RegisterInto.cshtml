@@ -1,0 +1,126 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegisterInto</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/md5.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input id="txtName" type="text" name="U_Name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input id="txtPwd" type="password" name="U_Pwd" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>验证码：</td>
+                <td>
+                    <input id="txtYzm" type="text" name="Yzm" />
+                </td>
+                <td>
+                    <input id="btnGetYzm" type="button" value="免费获取验证码" />
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Button1" type="button" value="注册" onclick="Register()" />
+                </td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        var InterValObj; //timer变量，控制时间
+        var count = 60; //间隔函数，1秒执行
+        var curCount;//当前剩余秒数
+        var code = ""; //验证码
+        var codeLength = 4;//验证码长度
+        $("#getcode").click(function () {
+
+            //获取输入的手机号码
+            var phoNum = $("#phone").val();
+            //alert(phoNum);
+            curCount = count;
+            $.getJSON('/Login/SendNET/', { PhoneNumber: phoNum }, function (result) {
+
+                if (result) {
+                    // 设置按钮显示效果，倒计时
+                    $("#getcode").attr("disabled", "true");
+                    $("#getcode").val("请在" + curCount + "秒内输入验证码");
+                    InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
+                } else {
+                    $("#getcode").val("重新发送验证码");
+                }
+            });
+        });
+        //timer处理函数
+        function SetRemainTime() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj);// 停止计时器
+                $("#getcode").removeAttr("disabled");// 启用按钮
+                $("#getcode").val("重新发送验证码");
+                code = ""; // 清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+            } else {
+                curCount--;
+                $("#getcode").val("请在" + curCount + "秒内输入验证码");
+            }
+        }
+
+
+
+
+    })
+
+
+
+    function Register() {
+        var obj = new Object();
+        obj.U_Name = $("#txtName").val();
+        obj.U_Pwd = hex_md5($("#txtPwd").val());
+        obj.U_Impower = 1;
+
+        $.ajax({
+            url: "https://localhost:44370/api/login/PostRegister",
+            data: JSON.stringify(obj),
+            type: "post",
+            contentType: "application/json",
+            //accepts: "application/x-www-form-urlencoded",
+            //contentType: "application/x-www-form-urlencoded",
+            success: function (data) {
+                if (data > 0) {
+                    alert("注册成功");
+                }
+                else {
+                    alert("失败,请重新注册");
+                    location.href = "/Login/Register";
+                }
+            }
+
+        })
+    }
+</script>

@@ -1,0 +1,73 @@
+﻿@model AsveinNetworkMvc.Models.CompanyManage
+
+@{
+    ViewData["Title"] = "AddCompany";
+}
+
+<h1>AddCompany</h1>
+
+<h4>CompanyManage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddCompany" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="C_CheckIndustry" class="control-label"></label>
+                <input asp-for="C_CheckIndustry" class="form-control" />
+                <span asp-validation-for="C_CheckIndustry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_AvailablePositions" class="control-label"></label>
+                <input asp-for="C_AvailablePositions" class="form-control" />
+                <span asp-validation-for="C_AvailablePositions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_TypeLabor" class="control-label"></label>
+                <input asp-for="C_TypeLabor" class="form-control" />
+                <span asp-validation-for="C_TypeLabor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_NearEstoffice" class="control-label"></label>
+                <input asp-for="C_NearEstoffice" class="form-control" />
+                <span asp-validation-for="C_NearEstoffice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_JobRequirements" class="control-label"></label>
+                <input asp-for="C_JobRequirements" class="form-control" />
+                <span asp-validation-for="C_JobRequirements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_Name" class="control-label"></label>
+                <input asp-for="C_Name" class="form-control" />
+                <span asp-validation-for="C_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_CompanyPhone" class="control-label"></label>
+                <input asp-for="C_CompanyPhone" class="form-control" />
+                <span asp-validation-for="C_CompanyPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_EmailAddress" class="control-label"></label>
+                <input asp-for="C_EmailAddress" class="form-control" />
+                <span asp-validation-for="C_EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="C_CompanyName" class="control-label"></label>
+                <input asp-for="C_CompanyName" class="form-control" />
+                <span asp-validation-for="C_CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="确认您的订单" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
