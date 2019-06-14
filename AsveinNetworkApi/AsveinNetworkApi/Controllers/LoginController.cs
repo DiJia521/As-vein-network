@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 using Newtonsoft.Json;
+using Orange.Jiuhemu.Utility;
 
 namespace AsveinNetworkApi.Controllers
 {
@@ -52,7 +53,7 @@ namespace AsveinNetworkApi.Controllers
         //[Route("/PostRegister")]
         //[Produces("application/json")]
         [EnableCors("any")]
-        public int PostRegister(UserLogin user)
+        public int PostRegister([FromBody] UserLogin user)
         {
             return bll.Register(user);
         }

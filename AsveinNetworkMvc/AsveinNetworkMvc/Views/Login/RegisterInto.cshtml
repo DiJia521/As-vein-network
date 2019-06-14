@@ -17,6 +17,7 @@
 <body>
     @using (Html.BeginForm())
     {
+        <input id="Hidden1" type="hidden" value="@ViewBag.Yzm" />
         <table>
             <tr>
                 <td>用户名：</td>
@@ -35,10 +36,10 @@
             <tr>
                 <td>验证码：</td>
                 <td>
-                    <input id="txtYzm" type="text" name="Yzm" />
+                    <input type="text" name="Yzm" id="verCode" value="" placeholder="请输入验证码" maxlength="4" />
                 </td>
                 <td>
-                    <input id="btnGetYzm" type="button" value="免费获取验证码" />
+                    <input type="button" name="" id="verCodeBtn" value="获取验证码" onclick="settime(this);" />
                 </td>
             </tr>
 
@@ -54,73 +55,78 @@
 </html>
 
 <script type="text/javascript">
+    var s = "";
+
     $(function () {
-        var InterValObj; //timer变量，控制时间
-        var count = 60; //间隔函数，1秒执行
-        var curCount;//当前剩余秒数
-        var code = ""; //验证码
-        var codeLength = 4;//验证码长度
-        $("#getcode").click(function () {
-
-            //获取输入的手机号码
-            var phoNum = $("#phone").val();
-            //alert(phoNum);
-            curCount = count;
-            $.getJSON('/Login/SendNET/', { PhoneNumber: phoNum }, function (result) {
-
-                if (result) {
-                    // 设置按钮显示效果，倒计时
-                    $("#getcode").attr("disabled", "true");
-                    $("#getcode").val("请在" + curCount + "秒内输入验证码");
-                    InterValObj = window.setInterval(SetRemainTime, 1000); // 启动计时器，1秒执行一次
-                } else {
-                    $("#getcode").val("重新发送验证码");
+        $("#verCodeBtn").click(function () {
+            var PhoneNum = $("#txtName").val();
+            $.ajax({
+                url: "/Login/SendNET?PhoneNumber=" + PhoneNum,
+                success: function (result) {
+                    if (result.length > 0) {
+                        alert("验证码发送成功");
+                        s = result;
+                    }
+                    else {
+                        alert("发送失败");
+                    }
                 }
-            });
-        });
-        //timer处理函数
-        function SetRemainTime() {
-            if (curCount == 0) {
-                window.clearInterval(InterValObj);// 停止计时器
-                $("#getcode").removeAttr("disabled");// 启用按钮
-                $("#getcode").val("重新发送验证码");
-                code = ""; // 清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
-            } else {
-                curCount--;
-                $("#getcode").val("请在" + curCount + "秒内输入验证码");
-            }
-        }
-
-
-
-
+            })
+        })
     })
+
+
+    var counts = 60;
+
+    function settime(val) {
+        if (counts == 0) {
+            val.removeAttribute("disabled");
+            val.value = "获取验证码";
+            counts = 60;
+            return false;
+        } else {
+            val.setAttribute("disabled", true);
+            val.value = "重新发送（" + counts + "）";
+            counts--;
+        }
+        setTimeout(function () {
+            settime(val);
+        }, 1000);
+    }
 
 
 
     function Register() {
-        var obj = new Object();
-        obj.U_Name = $("#txtName").val();
-        obj.U_Pwd = hex_md5($("#txtPwd").val());
-        obj.U_Impower = 1;
+        if (s == $("#verCode").val()) {
 
-        $.ajax({
-            url: "https://localhost:44370/api/login/PostRegister",
-            data: JSON.stringify(obj),
-            type: "post",
-            contentType: "application/json",
-            //accepts: "application/x-www-form-urlencoded",
-            //contentType: "application/x-www-form-urlencoded",
-            success: function (data) {
-                if (data > 0) {
-                    alert("注册成功");
-                }
-                else {
-                    alert("失败,请重新注册");
-                    location.href = "/Login/Register";
-                }
-            }
+            var obj = new Object();
+            obj.U_Name = $("#txtName").val();
+            obj.U_Pwd = hex_md5($("#txtPwd").val());
+            obj.U_Impower = 1;
 
-        })
+            $.ajax({
+                url: "https://localhost:44370/api/login/PostRegister",
+                data: JSON.stringify(obj),
+                type: "post",
+                contentType: 'application/json;',
+                //contentType: "application/x-www-form-urlencoded",
+                //accepts: "application/x-www-form-urlencoded",
+                //contentType: "application/x-www-form-urlencoded",
+                success: function (data) {
+                    if (data > 0) {
+                        alert("注册成功");
+                    }
+                    else {
+                        alert("失败,请重新注册");
+                        location.href = "/Login/Register";
+                    }
+                }
+
+            })
+        }
+        else {
+            alert("验证码输入有误,请核对后再次填写！");
+            $("#verCode").empty();
+        }
     }
 </script>

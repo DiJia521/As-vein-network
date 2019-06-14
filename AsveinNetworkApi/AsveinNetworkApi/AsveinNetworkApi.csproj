@@ -18,6 +18,7 @@
     <ProjectReference Include="..\BLL\BLL.csproj" />
     <ProjectReference Include="..\Log\Log.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\PublicClass\PublicClass.csproj" />
   </ItemGroup>
 
   <ItemGroup>

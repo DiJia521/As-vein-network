@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\Model\\Model.csproj",
+      "projectUniqueName": "E:\\项目\\zhimaiwang\\AsveinNetworkMvc\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\贾晓东\\.nuget\\packages\\",
-      "outputPath": "D:\\大一\\每日练习题\\AsveinNetworkMvc\\Model\\obj\\",
+      "projectPath": "E:\\项目\\zhimaiwang\\AsveinNetworkMvc\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\王新宇\\.nuget\\packages\\",
+      "outputPath": "E:\\项目\\zhimaiwang\\AsveinNetworkMvc\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

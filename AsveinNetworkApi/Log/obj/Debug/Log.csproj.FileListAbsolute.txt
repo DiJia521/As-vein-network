@@ -4,7 +4,6 @@ E:\项目\zhimaiwang\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CoreCompileInputs
 E:\项目\zhimaiwang\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CopyComplete
 E:\项目\zhimaiwang\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.dll
 E:\项目\zhimaiwang\AsveinNetworkApi\Log\obj\Debug\ExamSystem.Log.pdb
-E:\项目\zhimaiwang\AsveinNetworkApi\Log\obj\Debug\Log.csprojAssemblyReference.cache
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\bin\Debug\ExamSystem.Log.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\bin\Debug\ExamSystem.Log.pdb
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkApi\Log\obj\Debug\Log.csproj.CoreCompileInputs.cache

@@ -15,3 +15,11 @@ C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debu
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.dll
 C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.pdb
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.dll
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.pdb
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.dll
+E:\项目\zhimaiwang\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.pdb

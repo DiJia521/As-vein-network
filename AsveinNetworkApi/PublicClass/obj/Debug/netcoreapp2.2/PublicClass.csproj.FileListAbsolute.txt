@@ -1,0 +1,8 @@
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\obj\Debug\netcoreapp2.2\PublicClass.csproj.CoreCompileInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\obj\Debug\netcoreapp2.2\PublicClass.AssemblyInfoInputs.cache
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\obj\Debug\netcoreapp2.2\PublicClass.AssemblyInfo.cs
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\bin\Debug\netcoreapp2.2\PublicClass.deps.json
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\bin\Debug\netcoreapp2.2\PublicClass.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\bin\Debug\netcoreapp2.2\PublicClass.pdb
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\obj\Debug\netcoreapp2.2\PublicClass.dll
+E:\项目\zhimaiwang\AsveinNetworkApi\PublicClass\obj\Debug\netcoreapp2.2\PublicClass.pdb
