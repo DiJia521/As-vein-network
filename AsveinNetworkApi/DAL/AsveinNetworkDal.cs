@@ -6,83 +6,29 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using Log;
 
 namespace DAL
 {
     public class AsveinNetworkDal
     {
-        //使用连接字符串
-        private string ConnectionString;
-        public AsveinNetworkDal()
+        /// <summary>
+        /// 显示主界面
+        /// </summary>
+        /// <returns></returns>
+        public List<AsveinNetwork> GetAsvein()
         {
-            ConnectionString = @"Server=DESKTOP-65JEFQR;Database=Recruitment;Trusted_Connection=true;";
-        }
-
-        public IDbConnection connection
-        {
-            get
+            List<AsveinNetwork> str = null;
+            try
             {
-                return new SqlConnection(ConnectionString);
+                string sql = string.Format("select * from JoinUs");
+                str = DapperHelper<AsveinNetwork>.Query(sql, null);
             }
-        }
-        //添加
-        public void Add(AsveinNetwork network)
-        {
-            using (IDbConnection dbConnection = connection)
+            catch (Exception e)
             {
-                string sQuery = " insert into JoinUs values(@Join_Recruitment,@join_Seeker)";
-                dbConnection.Open();
-                dbConnection.Execute(sQuery, network);
+                Logger.Error("404");
             }
-        }
-        //显示
-        public IEnumerable<AsveinNetwork> GetAll()
-        {
-            using (IDbConnection dbConnection = connection)
-            {
-                dbConnection.Open();
-                return dbConnection.Query<AsveinNetwork>("SELECT * FROM JoinUs");
-            }
-        }
-        //反填
-        public AsveinNetwork GetByID(int id)
-        {
-            using (IDbConnection dbConnection = connection)
-            {
-                string sQuery = "SELECT * FROM JoinUs"
-                                + " WHERE Join_Id = @Id";
-                dbConnection.Open();
-                return dbConnection.Query<AsveinNetwork>(sQuery, new
-                {
-                    Id = id
-                }).FirstOrDefault();
-            }
-        }
-        //修改
-        public void Update(AsveinNetwork network)
-        {
-            using (IDbConnection dbConnection = connection)
-            {
-                string sQuery = "UPDATE JoinUs SET Join_Recruitment = @Join_Recruitment,"
-                               + " join_Seeker = @join_Seeker"
-                              + " WHERE Join_Id = @Join_Id";
-                dbConnection.Open();
-                dbConnection.Query(sQuery, network);
-            }
-        }
-        //删除
-        public void Delete(int id)
-        {
-            using (IDbConnection dbConnection = connection)
-            {
-                string sQuery = "DELETE FROM JoinUs"
-                            + " WHERE Join_Id = @Id";
-                dbConnection.Open();
-                dbConnection.Execute(sQuery, new
-                {
-                    Id = id
-                });
-            }
+            return str;
         }
     }
 }

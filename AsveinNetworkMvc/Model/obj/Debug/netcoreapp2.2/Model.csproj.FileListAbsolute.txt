@@ -6,3 +6,12 @@ D:\大一\每日练习题\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.A
 D:\大一\每日练习题\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 D:\大一\每日练习题\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.dll
 D:\大一\每日练习题\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\贾晓东\Source\Repos\As-vein-network3\AsveinNetworkMvc\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache

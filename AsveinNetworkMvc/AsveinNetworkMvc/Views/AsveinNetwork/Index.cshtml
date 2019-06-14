@@ -1,0 +1,35 @@
+﻿@model List<Model.AsveinNetwork>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>As vein network</h1>
+    <link href="~/ContentSSS/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/ContentSSS/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <table>
+        <tr>
+            <td>招聘</td>
+            <td>求职者</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Join_Recruitment</td>
+                <td>@item.join_Seeker</td>
+            </tr>
+        }
+    </table>
+    <div>
+    </div>
+</body>
+</html>

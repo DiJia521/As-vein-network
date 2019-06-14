@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/md5.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input id="txtName" type="text" name="U_Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input id="txtPwd" type="password" name="U_Pwd" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Button1" type="button" value="登录" onclick="Login()" />
+                </td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+
+<script>
+    function Login() {
+        var name = $("#txtName").val();
+        var pwd = hex_md5($("#txtPwd").val());
+        $.ajax({
+            url: "https://localhost:44370/api/login/GetLogin",
+            data: { "userName": name, "pwd": pwd },
+            type: "get",
+            contentType: "application/json",
+            success: function (data) {
+                if (data.length > 0) {
+                    alert("登录成功");
+                }
+                else {
+                    alert("用户名或密码错误,请重新输入");
+                    location.href = "/Login/Login"
+                }
+            }
+        })
+    }
+</script>
