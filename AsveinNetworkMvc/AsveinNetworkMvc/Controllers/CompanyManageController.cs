@@ -63,13 +63,47 @@ namespace AsveinNetworkMvc.Controllers
                 if(result!="失败")
                 {
 
-                    Response.Redirect("/CompanyManage/SeadEmail");
+                    Response.Redirect("/CompanyManage/SeadEmail?email=" + company.C_EmailAddress + "&name=" + company.C_Name + "&jobr=" + company.C_JobRequirements);
                 }
             }
             return View();
         }
-        public IActionResult SeadEmail()
+        public IActionResult SeadEmail(string email, string name, string jobr)
         {
+            ViewBag.email = email;
+            ViewBag.job = jobr;
+            System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+            client.Host = "smtp.163.com";//使用163的SMTP服务器发送邮件
+            client.UseDefaultCredentials = true;
+            client.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
+            client.Credentials = new System.Net.NetworkCredential("W_xy9992@163.com", "XY9992");//163的SMTP服务器需要用163邮箱的用户名和smtp授权码作认证，如果没有需要去163申请个,
+            //这里假定你已经拥有了一个163邮箱的账户，用户名为abc，密码为*******
+            System.Net.Mail.MailMessage Message = new System.Net.Mail.MailMessage();
+            Message.From = new System.Net.Mail.MailAddress("W_xy9992@163.com");//这里需要注意，163似乎有规定发信人的邮箱地址必须是163的，而且发信人的邮箱用户名必须和上面SMTP服务器认证时的用户名相同
+                                                                               //因为上面用的用户名abc作SMTP服务器认证，所以这里发信人的邮箱地址也应该写为abc@163.com
+
+            Message.To.Add(email);//将邮件发送给Gmail
+
+            //Message.To.Add("123456@gmail.com");//将邮件发送给Gmail
+            //Message.To.Add("123456@qq.com");//将邮件发送给QQ邮箱
+            Message.Subject = "职脉网通知";
+            string name1 = name.Substring(0, 1);
+            Message.Body = "恭喜" + name1 + "先生，您在职脉网发布成功，<br/> 祝您找到优秀的员工";
+            Message.SubjectEncoding = System.Text.Encoding.UTF8;
+            Message.BodyEncoding = System.Text.Encoding.UTF8;
+            Message.Priority = System.Net.Mail.MailPriority.High;
+            Message.IsBodyHtml = true;　　//可以为html
+            try
+            {
+                client.Send(Message);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.ToString());
+                throw;
+            }
+
+
             return View();
         }
     }
