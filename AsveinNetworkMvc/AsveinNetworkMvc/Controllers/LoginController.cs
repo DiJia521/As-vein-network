@@ -67,7 +67,7 @@ namespace AsveinNetworkMvc.Controllers
                 intString = random.Next(1000, 9999).ToString();
                 request.TemplateParam = "{\"code\":" + intString + "}";
 
-                HttpContext.Session.SetString("Yzm", intString);
+                
                
                 //可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者
                 //request.OutId = "yourOutId";
