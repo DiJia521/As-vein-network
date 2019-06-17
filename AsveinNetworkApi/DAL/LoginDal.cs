@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Log;
+using System.Data.SqlClient;
+using System.Data;
+using Dapper;
 
 namespace DAL
 {
@@ -14,7 +17,10 @@ namespace DAL
             try
             {
                 string str = "select * from UserLogin where U_Name = @U_Name";
-                list = DapperHelper<UserLogin>.Query(str, new { U_Name = name });
+                var args = new DynamicParameters();
+                args.Add("@U_Name", name);
+
+                list = DapperHelper<UserLogin>.Query(str, args);
             }
             catch(Exception e)
             {
@@ -37,11 +43,15 @@ namespace DAL
             try
             {
                 string str = "select * from UserLogin where U_Name = @U_Name and U_Pwd = @U_Pwd ";
-                list = DapperHelper<UserLogin>.Query(str, new { U_Name = name, U_Pwd = pwd });
+                var args = new DynamicParameters();
+                args.Add("@U_Name", name);
+                args.Add("@U_Pwd", pwd);
+
+                list = DapperHelper<UserLogin>.Query(str, args);
             }
             catch(Exception e)
             {
-                Logger.Error("登录出错");
+                Logger.Error("登录失败");
             }
 
             return list;
@@ -58,7 +68,12 @@ namespace DAL
             try
             {
                 string str = "insert into UserLogin values (@U_Name,@U_Pwd,@U_Impower)";
-                result = DapperHelper<UserLogin>.Execute(str, new { U_Name = user.U_Name, U_Pwd = user.U_Pwd, U_Impower = user.U_Impower });
+                var args = new DynamicParameters();
+                args.Add("@U_Name", user.U_Name);
+                args.Add("@U_Pwd", user.U_Pwd);
+                args.Add("@U_Impower", user.U_Impower);
+
+                result = DapperHelper<UserLogin>.Execute(str, args);
             }
             catch (Exception e)
             {
