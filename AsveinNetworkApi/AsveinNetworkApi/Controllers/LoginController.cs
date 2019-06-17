@@ -20,15 +20,27 @@ namespace AsveinNetworkApi.Controllers
         LoginBll bll = new LoginBll();
 
         [HttpGet]
-        public ActionResult<string> Get(string UserName,string pwd)
+        public ActionResult<string> Get(string userName, string pwd)
         {
             return "value";
+        }
+        [HttpGet("NewName/{name}")]
+        public ActionResult<string> GetAll(string name)
+        {
+            return "values";
         }
         [HttpPost]
         public int Post(UserLogin user)
         {
             return 1;
         }
+
+        [HttpGet("GetUsers/{name}")]
+        public List<UserLogin> GetUsers(string name)
+        {
+            return bll.GetUsers(name);
+        }
+
         /// <summary>
         /// 根据用户名，密码登录
         /// </summary>

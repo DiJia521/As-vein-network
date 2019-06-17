@@ -8,13 +8,13 @@ namespace DAL
 {
     public class LoginDal
     {
-        public List<UserLogin> GetUsers()
+        public List<UserLogin> GetUsers(string name)
         {
             List<UserLogin> list = null;
             try
             {
-                string str = "select * from UserLogin ";
-                list = DapperHelper<UserLogin>.Query(str, null);
+                string str = "select * from UserLogin where U_Name = @U_Name";
+                list = DapperHelper<UserLogin>.Query(str, new { U_Name = name });
             }
             catch(Exception e)
             {
@@ -30,14 +30,14 @@ namespace DAL
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        public List<UserLogin> GetLogin(string Name, string pwd)
+        public List<UserLogin> GetLogin(string name, string pwd)
         {
             List<UserLogin> list = null;
 
             try
             {
                 string str = "select * from UserLogin where U_Name = @U_Name and U_Pwd = @U_Pwd ";
-                list = DapperHelper<UserLogin>.Query(str, new { U_Name = Name, U_Pwd = pwd });
+                list = DapperHelper<UserLogin>.Query(str, new { U_Name = name, U_Pwd = pwd });
             }
             catch(Exception e)
             {

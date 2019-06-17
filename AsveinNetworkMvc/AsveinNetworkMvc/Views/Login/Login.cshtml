@@ -1,4 +1,4 @@
-﻿
+﻿@model AsveinNetworkMvc.Models.UserLogin;
 @{
     Layout = null;
 }
@@ -11,7 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <title>职脉网 -- 让你的高薪之路越来越稳</title>
-
+    <!--拼图验证码-->
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
     <!--图标样式-->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css'>
 
@@ -21,6 +22,8 @@
     <script src="~/js/jquery1.42.min.js"></script>
     <link href="~/css/show.css" rel="stylesheet" />
     <script src="~/js/md5.js"></script>
+    <script src="~/js/jquery.easyui.min.js"></script>
+    <script src="~/js/common_form_test.js"></script>
 
 
 </head>
@@ -33,14 +36,17 @@
             <form>
                 <h1>注册</h1>
                 @*<div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>第三方账号注册</span>*@
-                <input id="txtPhone" type="text" placeholder="手机号码" />
-                <input type="password" placeholder="密码" id="Password" />
-                <input type="password" placeholder="确认密码" />
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>第三方账号注册</span>*@
+                <input id="txtPhone"  name="Phonenum" type="text" placeholder="手机号码"  onblur="oBlur_1($('#txtPhone').val())" onfocus="oFocus_1()" />
+                <span id="remind_1" style="height:20px;width:200px;color:red"></span>
+                <input type="password" name="Pwd" placeholder="密码" id="Password" onblur="oBlur_2($('#Password').val())" onfocus="oFocus_2()"  />
+                <span id="remind_2" style="height:20px;width:150px;color:red"></span>
+                <input type="password" name="Pwd2" placeholder="确认密码" />
+                <span id="remind_3" style="height:20px;width:150px;color:red"></span>
                 <input type="text" id="verCode" value="" placeholder="请输入验证码" maxlength="4" />
                 <input type="button" name="" id="verCodeBtn" value="获取验证码" onclick="settime(this);" />
                 <input class="Login" type="button" value="注册" onclick="Register()" />
@@ -50,13 +56,16 @@
             <form>
                 <h1>登录</h1>
                 @*<div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>第三方账号登录</span>*@
-                <input type="text" placeholder="手机号码" id="txtName" />
-                <input type="password" placeholder="密码" id="txtPwd" />
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>第三方账号登录</span>*@
+                <input type="text" name="Phonenum" placeholder="手机号码" id="txtName"  onblur="oBlur_4($('#txtName').val())" onfocus="oFocus_4()" />
+                <span id="remind_4" style="height:20px;width:150px;color:red"></span>
+                <input type="password" name="Pwd" placeholder="密码" id="txtPwd" onblur="oBlur_5($('#txtPwd').val())" onfocus="oFocus_5()" />
+                <span id="remind_5" style="height:20px;width:150px;color:red"></span>
+                <input id="TencentCaptcha" type="button" data-appid="2091405832" data-cbfn="callback" value="验证" />
                 <a href="#">忘记密码？</a>
                 <input class="Login" type="button" value="登录" onclick="Login()" />
             </form>
@@ -91,9 +100,24 @@
 
 
 <script>
+    window.callback = function (res) {
+        console.log(res)
+        // res（用户主动关闭验证码）= {ret: 2, ticket: null}
+        // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+        if (res.ret === 0) {   // 票据
+        }
+    }
+
+    
+
+    //登录功能
     function Login() {
         var name = $("#txtName").val();
+        
         var pwd = hex_md5($("#txtPwd").val());
+        if (name === null) {
+            
+        }
         $.ajax({
             url: "https://localhost:44370/api/login/GetLogin",
             data: { "userName": name, "pwd": pwd },
@@ -113,6 +137,7 @@
 
     var s = "";
 
+    //验证码发送
     $(function () {
         $("#verCodeBtn").click(function () {
             var PhoneNum = $("#txtPhone").val();
@@ -151,7 +176,7 @@
     }
 
 
-
+    //注册
     function Register() {
         if (s == $("#verCode").val()) {
 

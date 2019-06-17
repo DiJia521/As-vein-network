@@ -11,15 +11,20 @@ namespace BLL
     {
         LoginDal dal = new LoginDal();
 
+        public List<UserLogin> GetUsers(string name)
+        {
+            return dal.GetUsers(name);
+        }
+
         /// <summary>
         /// 根据用户名，密码登录
         /// </summary>
         /// <param name="Name">用户名</param>
         /// <param name="pwd">密码</param>
         /// <returns></returns>
-        public List<UserLogin> GetLogin(string Name, string pwd)
+        public List<UserLogin> GetLogin(string name, string pwd)
         {
-            return dal.GetLogin(Name, pwd);
+            return dal.GetLogin(name, pwd);
         }
 
         /// <summary>
