@@ -45,8 +45,10 @@
                 <span id="remind_1" style="height:20px;width:200px;color:red"></span>
                 <input type="password" name="Pwd" placeholder="密码" id="Password" onblur="oBlur_2($('#Password').val())" onfocus="oFocus_2()"  />
                 <span id="remind_2" style="height:20px;width:150px;color:red"></span>
-                <input type="password" name="Pwd2" placeholder="确认密码" />
-                <span id="remind_3" style="height:20px;width:150px;color:red"></span>
+                <select id="Impower" style="background-color: #eee;border: none;padding: 12px 15px;margin: 8px 0;width: 100%;">
+                    <option value="0">公司用户</option>
+                    <option value="1">个人用户</option>
+                </select>
                 <input type="text" id="verCode" value="" placeholder="请输入验证码" maxlength="4" />
                 <input type="button" name="" id="verCodeBtn" value="获取验证码" onclick="settime(this);" />
                 <input class="Login" type="button" value="注册" onclick="Register()" />
@@ -183,7 +185,7 @@
             var obj = new Object();
             obj.U_Name = $("#txtPhone").val();
             obj.U_Pwd = hex_md5($("#Password").val());
-            obj.U_Impower = 1;
+            obj.U_Impower = $("#Impower").val();
 
             $.ajax({
                 url: "https://localhost:44370/api/login/PostRegister",

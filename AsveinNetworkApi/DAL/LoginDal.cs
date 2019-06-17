@@ -11,9 +11,10 @@ namespace DAL
 {
     public class LoginDal
     {
-        public List<UserLogin> GetUsers(string name)
+        public bool GetUsers(string name)
         {
             List<UserLogin> list = null;
+            var result = false;
             try
             {
                 string str = "select * from UserLogin where U_Name = @U_Name";
@@ -21,13 +22,17 @@ namespace DAL
                 args.Add("@U_Name", name);
 
                 list = DapperHelper<UserLogin>.Query(str, args);
+                if (list.Count != 0)
+                {
+                    result = true;
+                }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.Error("查询错误");
             }
 
-            return list;
+            return result;
         }
 
         /// <summary>
@@ -49,7 +54,7 @@ namespace DAL
 
                 list = DapperHelper<UserLogin>.Query(str, args);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.Error("登录失败");
             }

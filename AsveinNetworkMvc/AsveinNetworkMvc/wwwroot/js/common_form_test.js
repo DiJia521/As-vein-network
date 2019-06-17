@@ -13,37 +13,42 @@ function isPhoneNo(phone) {
 }
 
 function YzName(name) {
+    var result = false;
     $.ajax({
         url: "https://localhost:44370/api/login/GetUsers/" + name,
+        async: false,
         success: function (data) {
-            if (data.length > 0) {
-                return "true";
+            if (data) {
+
+                result = true;
             }
-            else {
-                return "false";
-            }
+
         }
     })
+    return result;
 }
 
 //用户框失去焦点后验证value值
 function oBlur_1(txt) {
     if (isPhoneNo(txt) == false) {
         document.getElementById("remind_1").innerHTML = "请输入正确的手机号码！";
-    } else if (txt=="") { //用户框value值为空
+    } else if (txt == "") { //用户框value值为空
         document.getElementById("remind_1").innerHTML = "请输入用户名！";
-    } else if (YzName(txt)!="true") {
+    } else if (YzName(txt)) {
         document.getElementById("remind_1").innerHTML = "该用户名已被使用,请重新输入！";
-    } else { //用户框value值不为空
+    }
+    else { //用户框value值不为空
         document.getElementById("remind_1").innerHTML = "";
     }
-    
+
+
+
 }
 
 function oBlur_4(txt) {
     if (isPhoneNo(txt) == false) {
         document.getElementById("remind_4").innerHTML = "请输入正确的手机号码！";
-    } else if (txt=="") { //用户框value值为空
+    } else if (txt == "") { //用户框value值为空
         document.getElementById("remind_4").innerHTML = "请输入用户名！";
     } else { //用户框value值不为空
         document.getElementById("remind_4").innerHTML = "";
@@ -53,7 +58,7 @@ function oBlur_4(txt) {
 
 //密码框失去焦点后验证value值
 function oBlur_2(txt) {
-    if (txt=="") { //密码框value值为空
+    if (txt == "") { //密码框value值为空
         document.getElementById("remind_2").innerHTML = "请输入密码！";
     } else { //密码框value值不为空
         document.getElementById("remind_2").innerHTML = "";
@@ -61,7 +66,7 @@ function oBlur_2(txt) {
 }
 
 function oBlur_5(txt) {
-    if (txt=="") { //密码框value值为空
+    if (txt == "") { //密码框value值为空
         document.getElementById("remind_5").innerHTML = "请输入密码！";
     } else { //密码框value值不为空
         document.getElementById("remind_5").innerHTML = "";
@@ -70,7 +75,7 @@ function oBlur_5(txt) {
 
 //密码框失去焦点后验证value值
 function oBlur_3() {
-    if (b!=c) { //密码框value值为空
+    if (b != c) { //密码框value值为空
         document.getElementById("remind_3").innerHTML = "请正确输入密码！";
     } else { //密码框value值不为空
         document.getElementById("remind_3").innerHTML = "";
