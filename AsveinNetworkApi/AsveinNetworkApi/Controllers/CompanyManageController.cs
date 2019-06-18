@@ -37,5 +37,16 @@ namespace AsveinNetworkApi.Controllers
             }
             return result;
         }
+
+        /// <summary>
+        /// 职位详情
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [HttpGet("GetJobMessage/{name}")]
+        public List<CompanyManage> GetJobMessage(string name)
+        {
+            return bll.GetJobMessage(name);
+        }
     }
 }

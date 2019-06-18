@@ -20,5 +20,15 @@ namespace BLL
             //调用dal层方法
             return dal.AddCompany(company);
         }
+
+        /// <summary>
+        /// 职位详情
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public List<CompanyManage> GetJobMessage(string name)
+        {
+            return dal.GetJobMessage(name);
+        }
     }
 }

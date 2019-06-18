@@ -106,5 +106,13 @@ namespace AsveinNetworkMvc.Controllers
 
             return View();
         }
+
+
+        public IActionResult jobMessages(string name)
+        {
+            string str = Sender("get", "api/CompanyManage/GetJobMessage/" + name, null);
+            var model = JsonConvert.DeserializeObject<List<CompanyManage>>(str);
+            return View(model);
+        }
     }
 }

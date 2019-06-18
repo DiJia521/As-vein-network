@@ -1,0 +1,116 @@
+﻿@using AsveinNetworkMvc.Models;
+@model List<CompanyManage>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Single Job Post</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/MoBan/images/favicon.ico">
+
+    <!-- Google Fonts
+    ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- All css files are included here
+    ============================================ -->
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link href="~/MoBan/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- This core.css file contents all plugins css file
+    ============================================ -->
+    <link href="~/MoBan/css/core.css" rel="stylesheet" />
+    <!-- Theme shortcodes/elements style
+    ============================================ -->
+    <link href="~/MoBan/css/shortcode/shortcodes.css" rel="stylesheet" />
+    <!-- Color Swithcer CSS
+    ============================================ -->
+    <link href="~/MoBan/css/plugins/color-switcher.css" rel="stylesheet" />
+    <!--  Theme main style
+    ============================================ -->
+    <link href="~/MoBan/css/style.css" rel="stylesheet" />
+    <!-- Color CSS
+    ============================================ -->
+    <link href="~/MoBan/css/plugins/color.css" rel="stylesheet" />
+    <!-- Responsive CSS
+    ============================================ -->
+    <link href="~/MoBan/css/responsive.css" rel="stylesheet" />
+    <!-- Modernizr JS -->
+    <script src="~/MoBan/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--Breadcrumb Banner Area Start-->
+    <div class="breadcrumb-banner-area pt-94 pb-85 bg-3 bg-opacity-dark-blue-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-text">
+                        <h2 class="text-center text-white uppercase mb-17">工作详情</h2>
+                        <div class="breadcrumb-bar">
+                            <ul class="breadcrumb text-center m-0">
+                                <li class="text-white uppercase ml-15 mr-15"><a href="index.html">Home</a></li>
+                                <li class="text-white uppercase ml-15 mr-15">Job Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Breadcrumb Banner Area-->
+    <!--Start of Single Job Post Area-->
+    <div class="single-job-post-area pt-70 mb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form action="#">
+                        <div class="single-job-content">
+                                <div class="area-title text-center">
+                                    <h2 class="pt-10 pb-10">@Model[0].C_AvailablePositions  @Model[0].C_TypeLabor  </h2>
+                                </div>
+
+                                <div class="title uppercase pt-70 pb-26"><span>职位描述</span></div>
+                                <div class="single-job-form">
+                                    <p>@Model[0].C_JobRequirements</p>
+                                </div>
+                                <div class="title uppercase mt-58 mb-25"><span>任职要求</span></div>
+                                <div class="single-job-form">
+                                    <div class="single-info mb-14">
+                                        <span class="number block"><span>1.</span>Some form,t the my have suffered alteration in some form,andomised words</span>
+                                        <span class="number block"><span>2.</span>believable.available, but the majority have sufferederation in some</span>
+                                        <span class="number block"><span>3.</span>There are many variations of passages of Lorem Ipsum available, but</span>
+                                        <span class="number block"><span>4.</span>Some form,t the my have suffered alteration in some form,andomised words</span>
+                                        <span class="number block"><span>5.</span>believable.available, but the majority have sufferederation in some</span>
+                                        <span class="number block"><span>6.</span>There are many variations of passages of Lorem Ipsum available, but</span>
+                                    </div>
+                                </div>
+                                <div class="title uppercase pt-47 pb-26"><span class="medium">公司信息</span></div>
+                                <div class="single-job-form">
+                                    <p><span>@Model[0].C_CompanyName</span></p>
+                                    <p><span>公司电话：</span><span>@Model[0].C_CompanyPhone</span></p>
+                                    <span>邮箱地址：</span><span>@Model[0].C_EmailAddress</span>
+                                </div>
+                                <div class="mt-38">
+                                    <a href="#" class="button button-large-box lg-btn mr-20" onclick="">返回</a>
+                                    <a href="#" class="button button-large-box lg-btn mr-20" onclick="">提交简历</a>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Single Job Post Area-->
+
+</body>
+</html>

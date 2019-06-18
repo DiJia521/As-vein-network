@@ -35,5 +35,26 @@ namespace DAL
             }
             return result;
         }
+
+        /// <summary>
+        /// 职位详情
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public List<CompanyManage> GetJobMessage(string name)
+        {
+            List<CompanyManage> list = null;
+            try
+            {
+                string str = "select * from CompanyManage where C_AvailablePositions=@C_AvailablePositions ";
+                list = DapperHelper<CompanyManage>.Query(str, new { C_AvailablePositions = name });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+
+            return list;
+        }
     }
 }
