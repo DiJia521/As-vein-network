@@ -36,7 +36,7 @@ namespace AsveinNetworkApi.Controllers
         }
 
         [HttpGet("GetUsers/{name}")]
-        public List<UserLogin> GetUsers(string name)
+        public bool GetUsers(string name)
         {
             return bll.GetUsers(name);
         }

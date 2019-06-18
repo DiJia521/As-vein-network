@@ -11,7 +11,7 @@ namespace BLL
     {
         LoginDal dal = new LoginDal();
 
-        public List<UserLogin> GetUsers(string name)
+        public bool GetUsers(string name)
         {
             return dal.GetUsers(name);
         }
