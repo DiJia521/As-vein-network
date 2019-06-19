@@ -11,12 +11,12 @@ namespace AsveinNetworkMvc.Controllers
 {
     public class CompanyManageController : Controller
     {
-        public  string  Sender(string method,string path,string content)
+        public string Sender(string method, string path, string content)
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:44370/");
             HttpResponseMessage responseMessage = null;
-            switch(method)
+            switch (method)
             {
                 case "get": //查询
                     responseMessage = client.GetAsync(path).Result;
@@ -24,7 +24,7 @@ namespace AsveinNetworkMvc.Controllers
                 case "post": //添加
                     HttpContent httpContent = new StringContent(content);
                     httpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    responseMessage = client.PostAsync(path,httpContent).Result;
+                    responseMessage = client.PostAsync(path, httpContent).Result;
                     break;
                 case "delete": //查询
                     responseMessage = client.DeleteAsync(path).Result;
@@ -32,13 +32,13 @@ namespace AsveinNetworkMvc.Controllers
                 case "put": //查询
                     HttpContent httpContent1 = new StringContent(content);
                     httpContent1.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    responseMessage = client.PutAsync(path,httpContent1).Result;
+                    responseMessage = client.PutAsync(path, httpContent1).Result;
 
                     break;
-                default:break;
+                default: break;
 
             }
-            if(responseMessage.IsSuccessStatusCode==true)
+            if (responseMessage.IsSuccessStatusCode == true)
             {
                 string result = responseMessage.Content.ReadAsStringAsync().Result;
                 return result;
@@ -56,11 +56,11 @@ namespace AsveinNetworkMvc.Controllers
         [HttpPost]
         public IActionResult AddCompany(CompanyManage company)
         {
-            if(company!=null)
+            if (company != null)
             {
                 string json = JsonConvert.SerializeObject(company);
-               string result=  Sender("post", "/api/CompanyManage",json);
-                if(result!="失败")
+                string result = Sender("post", "/api/CompanyManage", json);
+                if (result != "失败")
                 {
 
                     Response.Redirect("/CompanyManage/SeadEmail?email=" + company.C_EmailAddress + "&name=" + company.C_Name + "&jobr=" + company.C_JobRequirements);
@@ -107,12 +107,35 @@ namespace AsveinNetworkMvc.Controllers
             return View();
         }
 
-
+        /// <summary>
+        /// 职位详情
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public IActionResult jobMessages(string name)
         {
             string str = Sender("get", "api/CompanyManage/GetJobMessage/" + name, null);
             var model = JsonConvert.DeserializeObject<List<CompanyManage>>(str);
             return View(model);
+        }
+
+        //提交简历
+        public ActionResult PostResumes(string cname,string position,string rName,string rPhone,string rAge,string rAddress)
+        {
+            ManageJob job = new ManageJob();
+            job.C_CompanyName = cname;
+            job.C_AvailablePositions = position;
+            job.R_Name = rName;
+            job.R_Phone = rPhone;
+            job.R_Age = Convert.ToInt32(rAge);
+            job.R_Address = rAddress;
+            job.M_Pass = 0;
+            job.C_TypeLabor = "20k";
+
+            string json = JsonConvert.SerializeObject(job);
+            var result = Sender("post", "api/Resumes/AddManageJob", json);
+
+            return Json(result);
         }
     }
 }

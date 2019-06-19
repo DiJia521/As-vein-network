@@ -12,20 +12,40 @@ namespace DAL
         /// 显示简历信息
         /// </summary>
         /// <returns></returns>
-        public List<Resumes> GetResumes()
+        public List<Resumes> GetResumes(string name)
         {
             List<Resumes> str = null;
             try
             {
-                string sql = string.Format("select * from Resumes");
-                str = DapperHelper<Resumes>.Query(sql, null);
+                string sql = string.Format("select * from Resumes where R_Name = @R_Name");
+                str = DapperHelper<Resumes>.Query(sql, new { R_Name = name });
             }
             catch (Exception e)
             {
                 Logger.Error("404");
+            }
+            return str;
+        }
+
+        /// <summary>
+        /// 根据电话号码查询个人简历信息
+        /// </summary>
+        /// <param name="phone">手机号码</param>
+        /// <returns></returns>
+        public List<Resumes> GetResume(string phone)
+        {
+            List<Resumes> result = null;
+            try
+            {
+                string sql = "select R_Name,R_Phone,R_Age,R_Address from Resumes where R_Phone = @R_Phone ";
+                result = DapperHelper<Resumes>.Query(sql, new { R_Phone = phone });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
             }
 
-            return str;
+            return result;
         }
         /// <summary>
         /// 添加数据信息 
@@ -54,6 +74,27 @@ namespace DAL
                 R_Selfevaluation = res.R_Selfevaluation
             });
 
+        }
+
+        /// <summary>
+        /// 提交简历
+        /// </summary>
+        /// <param name="job"></param>
+        /// <returns></returns>
+        public int AddManageJob(ManageJob job)
+        {
+            string str = "insert into ManageJob values (@R_Name,@R_Phone,@R_Age,@R_Address,@C_CompanyName,@C_AvailablePositions,@C_TypeLabor,@M_Pass)";
+            return DapperHelper<ManageJob>.Execute(str, new
+            {
+                R_Name = job.R_Name,
+                R_Phone = job.R_Phone,
+                R_Age = job.R_Age,
+                R_Address = job.R_Address,
+                C_CompanyName = job.C_CompanyName,
+                C_AvailablePositions = job.C_AvailablePositions,
+                C_TypeLabor = job.C_TypeLabor,
+                M_Pass = job.M_Pass
+            });
         }
     }
 }

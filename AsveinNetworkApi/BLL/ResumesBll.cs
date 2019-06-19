@@ -5,17 +5,28 @@ using DAL;
 using Model;
 namespace BLL
 {
-   public class ResumesBll
+    public class ResumesBll
     {
         ResumesDal dal = new ResumesDal();
         /// <summary>
         /// 显示简历信息
         /// </summary>
         /// <returns></returns>
-        public List<Resumes> GetResumes()
+        public List<Resumes> GetResumes(string name)
         {
-            return dal.GetResumes();
+            return dal.GetResumes(name);
         }
+
+        /// <summary>
+        /// 根据电话号码查询个人简历信息
+        /// </summary>
+        /// <param name="phone"></param>
+        /// <returns></returns>
+        public List<Resumes> GetResume(string phone)
+        {
+            return dal.GetResume(phone);
+        }
+
         /// <summary>
         /// 添加数据信息 
         /// </summary>
@@ -24,6 +35,16 @@ namespace BLL
         public int AddResumes(Resumes res)
         {
             return dal.AddResumes(res);
+        }
+
+        /// <summary>
+        /// 提交简历
+        /// </summary>
+        /// <param name="job"></param>
+        /// <returns></returns>
+        public int AddManageJob(ManageJob job)
+        {
+            return dal.AddManageJob(job);
         }
     }
 }

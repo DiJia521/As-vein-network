@@ -13,7 +13,8 @@
     <title>Single Job Post</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="~/js/jquery1.42.min.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
     <!-- favicon
     ============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="~/MoBan/images/favicon.ico">
@@ -76,7 +77,7 @@
                     <form action="#">
                         <div class="single-job-content">
                                 <div class="area-title text-center">
-                                    <h2 class="pt-10 pb-10">@Model[0].C_AvailablePositions  @Model[0].C_TypeLabor  </h2>
+                                    <h2 class="pt-10 pb-10" id="position">@Model[0].C_AvailablePositions</h2>
                                 </div>
 
                                 <div class="title uppercase pt-70 pb-26"><span>职位描述</span></div>
@@ -96,13 +97,13 @@
                                 </div>
                                 <div class="title uppercase pt-47 pb-26"><span class="medium">公司信息</span></div>
                                 <div class="single-job-form">
-                                    <p><span>@Model[0].C_CompanyName</span></p>
-                                    <p><span>公司电话：</span><span>@Model[0].C_CompanyPhone</span></p>
-                                    <span>邮箱地址：</span><span>@Model[0].C_EmailAddress</span>
+                                    <p><span id="Companyname">@Model[0].C_CompanyName</span></p>
+                                    <p><span>公司电话：</span><span id="CompanyPhone">@Model[0].C_CompanyPhone</span></p>
+                                    <span>邮箱地址：</span><span id="Email">@Model[0].C_EmailAddress</span>
                                 </div>
                                 <div class="mt-38">
                                     <a href="#" class="button button-large-box lg-btn mr-20" onclick="">返回</a>
-                                    <a href="#" class="button button-large-box lg-btn mr-20" onclick="">提交简历</a>
+                                    <a href="#" class="button button-large-box lg-btn mr-20" onclick="AddResumes()">提交简历</a>
                                 </div>
                         </div>
                     </form>
@@ -114,3 +115,53 @@
 
 </body>
 </html>
+
+<script>
+    function AddResumes() {
+        //公司名称
+        var cname = document.getElementById("Companyname").innerHTML;
+        //职位信息
+        var position = document.getElementById("position").innerHTML;
+        var admin = $.cookie("admin");
+        if (admin == null) {
+            alert("请先登录");
+        } else {
+
+            var People = new Object();
+           
+            $.ajax({
+                url: "https://localhost:44370/api/resumes/getresume/" + admin,
+                async: false,
+                type:"get",
+                success: function (data) {
+                    People = data[0];
+                }
+            })
+            var rName = People.r_Name;
+            var rPhone = People.r_Phone;
+            var rAge = People.r_Age;
+            var rAddress = People.r_Address;
+
+            var job = new Object();
+            job.C_CompanyName = cname;
+            job.C_AvailablePositions = position;
+            job.R_Name = rName;
+            job.R_Phone = rPhone;
+            job.R_Age = rAge;
+            job.R_Address = rAddress;
+
+            $.ajax({
+                url: "/CompanyManage/PostResumes",
+                data: { "cname": cname, "position": position, "rName": rName, "rPhone": rPhone, "rAge": rAge, "rAddress": rAddress },
+                success: function (result) {
+                    if (result > 0) {
+                        alert("简历提交成功");
+                    }
+                    else {
+                        alert("简历提交失败");
+                    }
+                }
+            })
+        }
+    }
+</script>
