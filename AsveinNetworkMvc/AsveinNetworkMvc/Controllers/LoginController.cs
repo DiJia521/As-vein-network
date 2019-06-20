@@ -24,7 +24,7 @@ namespace AsveinNetworkMvc.Controllers
         }
 
         /// <summary>
-        /// 登录
+        /// 登录+注册
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -33,8 +33,21 @@ namespace AsveinNetworkMvc.Controllers
             return View();
         }
 
-        
-        public IActionResult RegisterInto()
+        /// <summary>
+        /// 重置密码
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Czmm1()
+        {
+            return View();
+        }
+
+        public IActionResult Czmm2()
+        {
+            return View();
+        }
+
+        public IActionResult Czmm3()
         {
             return View();
         }

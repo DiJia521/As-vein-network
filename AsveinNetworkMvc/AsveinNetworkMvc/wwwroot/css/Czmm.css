@@ -1,0 +1,192 @@
+﻿
+
+/*重置密码*/
+.big_czmm_content {
+    width: 100%;
+    min-width: 1190px;
+    background: #f0fdf2;
+    margin-top: -1px;
+}
+
+.czmm_content {
+    width: 846px;
+    margin: 0 auto;
+    padding: 25px 0 50px 0;
+}
+
+    .czmm_content .biaoti {
+        font-size: 20px;
+        font-family: "微软雅黑";
+        color: #666666;
+        line-height: 50px;
+        height: 50px;
+        font-weight: bold;
+    }
+
+    .czmm_content .buzhou {
+        height: 40px;
+        position: relative;
+        margin-bottom: 14px;
+    }
+
+    .czmm_content .buzhou_01 {
+        float: left;
+        background: #e4e4e4;
+        width: 282px;
+        height: 40px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        font-size: 16px;
+        font-family: "宋体";
+        color: #333333;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .czmm_content .buzhou .lv {
+        color: #FFFFFF !important;
+        font-weight: bold;
+        background: #84d397 !important;
+    }
+
+    .czmm_content .buzhou .kuai {
+        width: 36px;
+        height: 40px;
+        background: url(../image/chongzhimima/sanjiao.png) no-repeat;
+        position: absolute;
+    }
+
+    .czmm_content .buzhou .kuai_01 {
+        left: 263px;
+        top: 0;
+    }
+
+    .czmm_content .buzhou .kuai_02 {
+        left: 544px;
+        top: 0;
+    }
+
+    .czmm_content .nr {
+        width: 846px;
+        height: 285px;
+        padding-top: 45px;
+        background: #FFFFFF;
+        -moz-box-shadow: 0px 2px 4px #ced8cf;
+        -webkit-box-shadow: 0px 2px 4px #ced8cf;
+        box-shadow: 0px 2px 4px #ced8cf;
+    }
+
+    .czmm_content .nr_01 {
+        height: 36px;
+        margin-bottom: 23px;
+        font-family: "宋体";
+        font-size: 15px;
+    }
+
+        .czmm_content .nr_01 .text {
+            float: left;
+            width: 235px;
+            text-align: right;
+            margin-right: 12px;
+            line-height: 36px;
+            color: #626262;
+            font-weight: bold;
+        }
+
+        .czmm_content .nr_01 .input_00 {
+            border: 1px solid #aaaaaa;
+            line-height: 34px;
+            text-indent: 10px;
+            color: #333333;
+            float: left;
+        }
+
+        .czmm_content .nr_01 .input_lv {
+            border: 1px solid #3ba354;
+        }
+
+        .czmm_content .nr_01 .input_01 {
+            width: 348px;
+            height: 34px;
+        }
+
+        .czmm_content .nr_01 .input_02 {
+            width: 223px;
+            height: 34px;
+        }
+
+        .czmm_content .nr_01 .input_03 {
+            width: 119px;
+            height: 36px;
+            float: left;
+            margin-left: 4px;
+            border: 1px solid #caeacf;
+            background: #dafcdf;
+            text-align: center;
+            color: #3ba354;
+            cursor: pointer;
+        }
+
+            .czmm_content .nr_01 .input_03:active {
+                background: #3ba354;
+                color: #FFFFFF;
+            }
+
+        .czmm_content .nr_01 .tishi {
+            margin-left: 12px;
+            line-height: 18px;
+            height: 36px;
+            width: 90px;
+            float: left;
+            font-size: 12px;
+            color: #999999;
+        }
+
+            .czmm_content .nr_01 .tishi a {
+                display: inline-block;
+                width: 23px;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                color: #3ba354;
+            }
+
+    .czmm_content .nr_02 {
+        margin-top: 12px;
+        height: 40px;
+        padding-left: 247px;
+    }
+
+    .czmm_content .nr .input_11 {
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        width: 111px;
+        height: 40px;
+        background: #3ba354;
+        font-weight: bold;
+        font-size: 16px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .czmm_content .nr_03 {
+        background: url(../image/chongzhimima/wancheng.png) no-repeat 250px 34px;
+    }
+
+        .czmm_content .nr_03 .queren {
+            float: left;
+            margin: 34px 0 0 357px;
+            min-height: 76px;
+        }
+
+            .czmm_content .nr_03 .queren .text {
+                line-height: 32px;
+                font-size: 24px;
+                font-family: "微软雅黑";
+                color: #3ba354;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+/*重置密码-结束*/

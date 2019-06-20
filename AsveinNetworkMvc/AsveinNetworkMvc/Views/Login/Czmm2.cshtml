@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Czmm2</title>
+    <link href="~/css/Czmm.css" rel="stylesheet" />
+    <script src="~/js/jquery1.42.min.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/md5.js"></script>
+</head>
+<body>
+    <div class="big_czmm_content">
+        <div class="czmm_content">
+            <div class="biaoti">重置密码</div>
+            <div class="buzhou">
+                <div class="buzhou_01 lv">验证身份</div>
+                <div class="kuai kuai_01"></div>
+                <div class="buzhou_01 lv">重置密码</div>
+                <div class="kuai kuai_02"></div>
+                <div class="buzhou_01">完成</div>
+            </div>
+            <div class="nr">
+                <div class="nr_01">
+                    <div class="text">新密码</div>
+                    <input type="password" class="input_00 input_01" id="newpwd" />
+                </div>
+                <div class="nr_01">
+                    <div class="text">确认新密码</div>
+                    <input type="password" class="input_00 input_01" id="TruePwd" />
+                </div>
+                <div class="nr_02">
+                    <input type="button" value="下一步" class="input_11" onclick="Upt()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function Upt() {
+        var name = $.cookie("Yhm");
+        var pwd = $("#newpwd").val();
+        var pwd2 = $("#TruePwd").val();
+
+        var user = new Object();
+        user.U_Name = name;
+        user.U_Pwd = hex_md5(pwd);;
+        if (pwd == pwd2) {
+            
+            $.ajax({
+                url: "https://localhost:44370/api/login/Czmm",
+                data: JSON.stringify(user),
+                type: "put",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result > 0) {
+                        location.href = "/Login/Czmm3";
+                    }
+                }
+            })
+        } else {
+            alert("两次输入不一致！");
+        }
+    }
+</script>

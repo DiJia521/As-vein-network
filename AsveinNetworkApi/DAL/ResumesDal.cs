@@ -37,7 +37,7 @@ namespace DAL
             List<Resumes> result = null;
             try
             {
-                string sql = "select R_Name,R_Phone,R_Age,R_Address from Resumes where R_Phone = @R_Phone ";
+                string sql = "select R_Name,R_Phone,R_Age,R_Email,R_Salary from Resumes where R_Phone = @R_Phone ";
                 result = DapperHelper<Resumes>.Query(sql, new { R_Phone = phone });
             }
             catch (Exception e)
@@ -83,17 +83,18 @@ namespace DAL
         /// <returns></returns>
         public int AddManageJob(ManageJob job)
         {
-            string str = "insert into ManageJob values (@R_Name,@R_Phone,@R_Age,@R_Address,@C_CompanyName,@C_AvailablePositions,@C_TypeLabor,@M_Pass)";
+            string str = "insert into ManageJob values (@R_Name,@R_Phone,@R_Age,@R_EmailAddress,@C_CompanyName,@C_AvailablePositions,@C_TypeLabor,@M_Pass,@C_CompanyAddress)";
             return DapperHelper<ManageJob>.Execute(str, new
             {
                 R_Name = job.R_Name,
                 R_Phone = job.R_Phone,
                 R_Age = job.R_Age,
-                R_Address = job.R_Address,
+                R_EmailAddress = job.R_EmailAddress,
                 C_CompanyName = job.C_CompanyName,
                 C_AvailablePositions = job.C_AvailablePositions,
                 C_TypeLabor = job.C_TypeLabor,
-                M_Pass = job.M_Pass
+                M_Pass = job.M_Pass,
+                C_CompanyAddress = job.C_CompanyAddress,
             });
         }
     }

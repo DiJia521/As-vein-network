@@ -120,17 +120,18 @@ namespace AsveinNetworkMvc.Controllers
         }
 
         //提交简历
-        public ActionResult PostResumes(string cname,string position,string rName,string rPhone,string rAge,string rAddress)
+        public ActionResult PostResumes(string cname,string position,string address,string rName,string rPhone,string rAge,string rAddress,string rSalary)
         {
             ManageJob job = new ManageJob();
             job.C_CompanyName = cname;
             job.C_AvailablePositions = position;
+            job.C_CompanyAddress = address;
             job.R_Name = rName;
             job.R_Phone = rPhone;
             job.R_Age = Convert.ToInt32(rAge);
-            job.R_Address = rAddress;
+            job.R_EmailAddress = rAddress;
             job.M_Pass = 0;
-            job.C_TypeLabor = "20k";
+            job.C_TypeLabor = rSalary;
 
             string json = JsonConvert.SerializeObject(job);
             var result = Sender("post", "api/Resumes/AddManageJob", json);

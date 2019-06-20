@@ -87,5 +87,27 @@ namespace DAL
 
             return result;
         }
+
+        /// <summary>
+        /// 重置密码
+        /// </summary>
+        /// <param name="pwd">新密码</param>
+        /// <param name="name">用户名</param>
+        /// <returns></returns>
+        public int Czmm(string pwd,string name)
+        {
+            int result = 0;
+            try
+            {
+                string str = "update UserLogin set U_Pwd = @U_Pwd where U_Name = @U_Name ";
+                result = DapperHelper<UserLogin>.Execute(str, new { U_Pwd = pwd, U_Name = name });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+
+            return result;
+        }
     }
 }

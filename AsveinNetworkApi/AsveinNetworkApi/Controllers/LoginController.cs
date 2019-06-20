@@ -64,5 +64,17 @@ namespace AsveinNetworkApi.Controllers
         {
             return bll.Register(user);
         }
+
+        /// <summary>
+        /// 重置密码
+        /// </summary>
+        /// <param name="pwd"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [HttpPut("Czmm")]
+        public int Czmm(UserLogin user)
+        {
+            return bll.Czmm(user.U_Pwd, user.U_Name);
+        }
     }
 }

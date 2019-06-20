@@ -36,5 +36,16 @@ namespace BLL
         {
             return dal.Register(user);
         }
+
+        /// <summary>
+        /// 重置密码
+        /// </summary>
+        /// <param name="pwd"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public int Czmm(string pwd, string name)
+        {
+            return dal.Czmm(pwd, name);
+        }
     }
 }

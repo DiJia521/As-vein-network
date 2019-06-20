@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Czmm1</title>
+    <link href="~/css/Czmm.css" rel="stylesheet" />
+    <script src="~/js/jquery1.42.min.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+</head>
+<body>
+    <div class="big_czmm_content">
+        <div class="czmm_content">
+            <div class="biaoti">重置密码</div>
+            <div class="buzhou">
+                <div class="buzhou_01 lv">验证身份</div>
+                <div class="kuai kuai_01"></div>
+                <div class="buzhou_01">重置密码</div>
+                <div class="kuai kuai_02"></div>
+                <div class="buzhou_01">完成</div>
+            </div>
+            <div class="nr">
+                <div class="nr_01">
+                    <div class="text">手机号码</div>
+                    <input type="text" class="input_00 input_01" id="txtPhone" />
+                </div>
+                <div class="nr_01">
+                    <div class="text">校验码</div>
+                    <input type="text" class="input_00 input_02" id="vodetxt" />
+                    <input type="button" value="获取校验码" class="input_03" id="verCodeBtn" onclick="settime(this)">
+                    @*<div class="tishi">剩余 <a>60</a> 秒后重新获取校验码</div>*@
+                </div>
+                <div class="nr_02">
+                    <input type="button" value="下一步" class="input_11" onclick="Tiao()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var s = "";
+
+    //验证码发送
+    $(function () {
+        $("#verCodeBtn").click(function () {
+            var PhoneNum = $("#txtPhone").val();
+            if (PhoneNum != null) {
+                $.ajax({
+                    url: "/Login/SendNET?PhoneNumber=" + PhoneNum,
+                    success: function (result) {
+                        if (result.length > 0) {
+                            alert("验证码发送成功");
+                            s = result;
+                        }
+                        else {
+                            alert("发送失败");
+                        }
+                    }
+                })
+            }
+        })
+    })
+
+    var counts = 60;
+
+    function settime(val) {
+        if (counts == 0) {
+            val.removeAttribute("disabled");
+            val.value = "获取验证码";
+            counts = 60;
+            return false;
+        } else {
+            val.setAttribute("disabled", true);
+            val.value = "重新发送（" + counts + "）";
+            counts--;
+        }
+        setTimeout(function () {
+            settime(val);
+        }, 1000);
+    }
+
+    function Tiao() {
+        if (s == $("#vodetxt").val()) {
+            var name = $("#txtPhone").val();
+            if (name != "") {
+                $.cookie("Yhm", name, { expires: 7, path: '/' });
+                location.href = "/Login/Czmm2";
+            }
+        }
+        else {
+            alert("验证码错误！请重新输入");
+        }
+    }
+
+</script>
