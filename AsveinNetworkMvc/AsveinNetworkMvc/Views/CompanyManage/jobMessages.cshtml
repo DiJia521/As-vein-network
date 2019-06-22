@@ -99,10 +99,11 @@
                                 <div class="single-job-form">
                                     <p><span id="Companyname">@Model[0].C_CompanyName</span></p>
                                     <p><span>公司电话：</span><span id="CompanyPhone">@Model[0].C_CompanyPhone</span></p>
+                                    <p><span>公司地址：</span><span id="CompangAddress">@Model[0].C_NearEstoffice</span></p>
                                     <span>邮箱地址：</span><span id="Email">@Model[0].C_EmailAddress</span>
                                 </div>
                                 <div class="mt-38">
-                                    <a href="#" class="button button-large-box lg-btn mr-20" onclick="">返回</a>
+                                    <a href="/AsveinNetwork/XinJobsearch" class="button button-large-box lg-btn mr-20" onclick="">返回</a>
                                     <a href="#" class="button button-large-box lg-btn mr-20" onclick="AddResumes()">提交简历</a>
                                 </div>
                         </div>
@@ -122,6 +123,9 @@
         var cname = document.getElementById("Companyname").innerHTML;
         //职位信息
         var position = document.getElementById("position").innerHTML;
+        //公司地址
+        var address = document.getElementById("CompangAddress").innerHTML;
+
         var admin = $.cookie("admin");
         if (admin == null) {
             alert("请先登录");
@@ -140,7 +144,8 @@
             var rName = People.r_Name;
             var rPhone = People.r_Phone;
             var rAge = People.r_Age;
-            var rAddress = People.r_Address;
+            var rAddress = People.r_Email;
+            var rSalary = People.r_Salary;
 
             var job = new Object();
             job.C_CompanyName = cname;
@@ -148,11 +153,13 @@
             job.R_Name = rName;
             job.R_Phone = rPhone;
             job.R_Age = rAge;
-            job.R_Address = rAddress;
+            job.R_EmailAddress = rAddress;
+            job.C_TypeLabor = rSalary;
+
 
             $.ajax({
                 url: "/CompanyManage/PostResumes",
-                data: { "cname": cname, "position": position, "rName": rName, "rPhone": rPhone, "rAge": rAge, "rAddress": rAddress },
+                data: { "cname": cname, "position": position, "address": address, "rName": rName, "rPhone": rPhone, "rAge": rAge, "rAddress": rAddress, "rSalary": rSalary },
                 success: function (result) {
                     if (result > 0) {
                         alert("简历提交成功");

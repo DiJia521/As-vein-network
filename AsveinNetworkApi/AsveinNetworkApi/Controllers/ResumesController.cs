@@ -59,5 +59,8 @@ namespace AsveinNetworkApi.Controllers
         {
             return bll.AddManageJob(job);
         }
+
+
+
     }
 }

@@ -1,3 +1,77 @@
 ﻿@{
     Layout = "_Layout";
 }
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>As vein network</title>
+    <link href="~/assets/css/animate.css" rel="stylesheet" />
+    <link href="~/assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/hover-min.css" rel="stylesheet" />
+    <link href="~/assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/assets/css/responsive.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.1.1.js"></script>
+    <script src="~/assets/js/bootsnav.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+</head>
+<body>
+    <div class="wrapper-sticky" style="display: block; height: 105px; width: auto; margin: auto; position: relative; float: none; left: auto; right: auto; top: auto; bottom: auto; vertical-align: top;">
+        <section id="menu">
+            <div class="container">
+                <div class="menubar">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="Index" style="font-size:35px; color:black;">
+                                职 脉 网
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">个人简历</a></li>
+                                <li><a id="user" href="/Login/Login">登录/注册</a></li>
+                                <li><a href="/Login/Login" id="Eite"></a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="lnr lnr-cart"></span>
+                                    </a>
+                                </li>
+                                <li class="search">
+                                    <form action="">
+                                        <input type="text" name="search" placeholder="Search....">
+                                        <a href="#">
+                                            <span class="lnr lnr-magnifier"></span>
+                                        </a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+<script>
+    admin = $.cookie("admin");
+    if (admin != null) {
+        document.getElementById("user").innerText = "欢迎你," + admin;
+        document.getElementById("Eite").innerText = "退出";
+    }
+    else {
+        document.getElementById("user").innerText = "登录/注册";
+    }
+</script>

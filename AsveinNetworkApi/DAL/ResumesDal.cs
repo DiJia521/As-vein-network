@@ -23,7 +23,7 @@ namespace DAL
             catch (Exception e)
             {
                 Logger.Error("404");
-            }
+            }            
             return str;
         }
 

@@ -1,35 +1,189 @@
-﻿@model List<Model.AsveinNetwork>
-
+﻿
 @{
     Layout = null;
 }
-
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <!-- META DATA -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>As vein network</title>
+    <link href="~/assets/css/animate.css" rel="stylesheet" />
+    <link href="~/assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/hover-min.css" rel="stylesheet" />
+    <link href="~/assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/assets/css/responsive.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.1.1.js"></script>
+    <script src="~/assets/js/bootsnav.js"></script>
 </head>
 <body>
-    <h1>As vein network</h1>
-    <link href="~/ContentSSS/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
-    <script src="~/ContentSSS/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <section class="header-slider-area">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
 
-    <table>
-        <tr>
-            <td>招聘</td>
-            <td>求职者</td>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Join_Recruitment</td>
-                <td>@item.join_Seeker</td>
-            </tr>
-        }
-    </table>
-    <div>
-    </div>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="single-slide-item slide-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="single-slide-item-content">
+                                        <h2>If not now,when? <br> If not me,who?</h2>
+                                        <p>
+                                            此时此刻,非你莫属!
+                                        </p>
+                                        <button type="button" class="slide-btn" onclick="FaBu()">
+                                            发布招聘信息
+                                        </button>
+                                        <button type="button" class="slide-btn" onclick="SouSuo()">
+                                            招聘信息搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-slide-item slide-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="single-slide-item-content">
+                                        <h2>
+                                            Consult Your <br> Business
+                                        </h2>
+                                        <p>
+                                            We are the unique Consultancy Farm for your business solution, That is ready to take challenge and knockout your business problems.
+                                        </p>
+                                        <button type="button" class="slide-btn">
+                                            get started
+                                        </button>
+                                        <button type="button" class="slide-btn
+											">
+                                            explore more
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="lnr lnr-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="lnr lnr-chevron-right"></span>
+            </a>
+        </div>
+    </section>
+    <!--关于我们-->
+    <section class="we-do">
+        <div class="container">
+            <div class="we-do-details">
+                <div class="section-header text-center">
+                    <h2> 我们所做的 </h2>
+                    <p>
+                        你来我们就有故事   为客户服务是我们唯一目标
+                    </p>
+                </div><!--/.section-header-->
+                <div class="we-do-carousel">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="single-we-do-box text-center">
+                                <div class="we-do-description">
+                                    <div class="we-do-info">
+                                        <div class="we-do-img">
+                                            <img src="~/assets/images/home/consultency.png" alt="image of consultency" />
+                                        </div><!--/.we-do-img-->
+                                        <div class="we-do-topics">
+                                            <h2>
+                                                <a href="#">
+                                                    团 结
+                                                </a>
+                                            </h2>
+                                        </div><!--/.we-do-topics-->
+                                    </div><!--/.we-do-info-->
+                                    <div class="we-do-comment">
+                                        <p>
+                                            能用众力,则无敌于天下矣；能用众智,则无畏于圣人矣.
+                                        </p>
+                                    </div><!--/.we-do-comment-->
+                                </div><!--/.we-do-description-->
+                            </div><!--/.single-we-do-box-->
+                        </div><!--/.col-->
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="single-we-do-box text-center">
+                                <div class="we-do-description">
+                                    <div class="we-do-info">
+                                        <div class="we-do-img">
+                                            <img src="~/assets/images/home/busisness_grow.png" alt="image of business" />
+                                        </div><!--/.we-do-img-->
+                                        <div class="we-do-topics">
+                                            <h2>
+                                                <a href="#">
+                                                    奋 斗
+                                                </a>
+                                            </h2>
+                                        </div><!--/.we-do-topics-->
+                                    </div><!--/.we-do-info-->
+                                    <div class="we-do-comment">
+                                        <p>
+                                            天行健，君子以自强不息
+                                        </p>
+                                    </div><!--/.we-do-comment-->
+                                </div><!--/.we-do-description-->
+                            </div><!--/.single-we-do-box-->
+                        </div><!--/.col-->
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="single-we-do-box text-center">
+                                <div class="we-do-description">
+                                    <div class="we-do-info">
+                                        <div class="we-do-img">
+                                            <img src="~/assets/images/home/support-logo.png" alt="image of support" />
+                                        </div><!--/.we-do-img-->
+                                        <div class="we-do-topics">
+                                            <h2>
+                                                <a href="#">
+                                                    坚 持
+                                                </a>
+
+                                            </h2>
+                                        </div><!--/.we-do-topics-->
+                                    </div><!--/.we-do-info-->
+                                    <div class="we-do-comment">
+                                        <p>
+                                            古之成大事者,不惟有超士之才,亦有坚忍不拔之志.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+<script>
+    function FaBu() {
+        location.href = '/CompanyManage/AddCompany';
+    }
+    function SouSuo() {
+        location.href = '/AsveinNetwork/XinJobsearch';
+    }
+</script>

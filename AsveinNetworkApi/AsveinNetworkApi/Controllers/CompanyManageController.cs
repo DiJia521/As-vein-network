@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Model;
 using BLL;
 using Log;
+using Microsoft.AspNetCore.Cors;
 
 namespace AsveinNetworkApi.Controllers
 {
+    [EnableCors("AllowSameDomain")]
     [Route("api/[controller]")]
     [ApiController]
     public class CompanyManageController : ControllerBase
@@ -21,14 +23,14 @@ namespace AsveinNetworkApi.Controllers
         /// <param name="company"></param>
         /// 
         ///<returns></returns>
-        
+
         [HttpPost]
         public int Post(CompanyManage company)
         {
             int result = 0;
-            if(company!=null)
+            if (company != null)
             {
-                result=  bll.AddCompany(company);
+                result = bll.AddCompany(company);
             }
             else
             {
@@ -47,6 +49,20 @@ namespace AsveinNetworkApi.Controllers
         public List<CompanyManage> GetJobMessage(string name)
         {
             return bll.GetJobMessage(name);
+        }
+
+        [HttpGet("{address}/{jobname}")]
+        //地点地点模糊查询
+        public List<CompanyManage> GetNearAvai(string address, string jobname)
+        {
+            return bll.GetNearAvai(address, jobname);
+        }
+
+        [HttpGet("GetJobList")]
+        //查询所有职位信息
+        public List<CompanyManage> GetJobList()
+        {
+            return bll.GetJobList();
         }
     }
 }

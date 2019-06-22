@@ -7,7 +7,7 @@ using Model;
 namespace DAL
 {
 
-   public  class CompanyManageDal
+    public class CompanyManageDal
     {
 
         /// <summary>
@@ -15,7 +15,7 @@ namespace DAL
         /// </summary>
         /// <param name="company"></param>
         /// <returns></returns>
-        public   int   AddCompany(CompanyManage company)
+        public int AddCompany(CompanyManage company)
         {
             int result = 0;
             try
@@ -23,13 +23,20 @@ namespace DAL
                 //字符串添加
                 string str = "insert into  CompanyManage  values(@C_CheckIndustry,@C_AvailablePositions,@C_TypeLabor,@C_NearEstoffice,@C_JobRequirements,@C_Name,@C_CompanyPhone,@C_EmailAddress,@C_CompanyName)";
                 //调用
-                result = DapperHelper<CompanyManage>.Execute(str,new { C_CheckIndustry=company.C_CheckIndustry, C_AvailablePositions=company.C_AvailablePositions, C_TypeLabor=company.C_TypeLabor, C_NearEstoffice=company.C_NearEstoffice,
-                    C_JobRequirements=company.C_JobRequirements,C_Name=company.C_Name,C_CompanyPhone=company.C_CompanyPhone,
-                    C_EmailAddress=company.C_EmailAddress,
-                    C_CompanyName=company.C_CompanyName
-                } );
+                result = DapperHelper<CompanyManage>.Execute(str, new
+                {
+                    C_CheckIndustry = company.C_CheckIndustry,
+                    C_AvailablePositions = company.C_AvailablePositions,
+                    C_TypeLabor = company.C_TypeLabor,
+                    C_NearEstoffice = company.C_NearEstoffice,
+                    C_JobRequirements = company.C_JobRequirements,
+                    C_Name = company.C_Name,
+                    C_CompanyPhone = company.C_CompanyPhone,
+                    C_EmailAddress = company.C_EmailAddress,
+                    C_CompanyName = company.C_CompanyName
+                });
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.Error(e.TargetSite.ToString());
             }
@@ -54,6 +61,40 @@ namespace DAL
                 Logger.Error(e.TargetSite.ToString());
             }
 
+            return list;
+        }
+
+        //地点职位模糊查询
+        public List<CompanyManage> GetNearAvai(string C_NearEstoffice, string C_AvailablePositions)
+        {
+            List<CompanyManage> list = null;
+            try
+            {
+                //地点条件查询                
+                string sql = "select * from CompanyManage ";
+                if (!string.IsNullOrEmpty(C_NearEstoffice))
+                {
+                    sql += " where C_NearEstoffice like '%" + C_NearEstoffice + "%' ";
+                }
+                //职位条件查询                
+                if (!string.IsNullOrEmpty(C_AvailablePositions))
+                {
+                    sql += " or  C_AvailablePositions like '%" + C_AvailablePositions + "%' ";
+                }
+                list = DapperHelper<CompanyManage>.Query(sql, new { C_NearEstoffice = C_NearEstoffice, C_AvailablePositions = C_AvailablePositions });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+            return list;
+        }
+
+        //查询所有职位信息
+        public List<CompanyManage> GetJobList()
+        {
+            string str = "select C_AvailablePositions,C_NearEstoffice,C_TypeLabor from CompanyManage ";
+            var list = DapperHelper<CompanyManage>.Query(str, null);
             return list;
         }
     }

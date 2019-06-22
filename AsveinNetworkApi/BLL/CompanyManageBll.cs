@@ -7,7 +7,7 @@ using Model;
 
 namespace BLL
 {
-  public  class CompanyManageBll
+    public class CompanyManageBll
     {
         CompanyManageDal dal = new CompanyManageDal();
         /// <summary>
@@ -29,6 +29,18 @@ namespace BLL
         public List<CompanyManage> GetJobMessage(string name)
         {
             return dal.GetJobMessage(name);
+        }
+
+        //地点职位模糊查询
+        public List<CompanyManage> GetNearAvai(string C_NearEstoffice, string C_AvailablePositions)
+        {
+            return dal.GetNearAvai(C_NearEstoffice, C_AvailablePositions);
+        }
+
+        //查询所有职位信息
+        public List<CompanyManage> GetJobList()
+        {
+            return dal.GetJobList();
         }
     }
 }
