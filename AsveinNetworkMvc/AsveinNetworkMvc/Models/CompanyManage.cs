@@ -16,7 +16,7 @@ namespace AsveinNetworkMvc.Models
         [Display(Name = "所要招聘的职位")]
         [Required(ErrorMessage = "不能为空")]
         public string C_AvailablePositions { get; set; }
-        [Display(Name = "用工类型")]
+        [Display(Name = "预计薪资")]
         [Required(ErrorMessage = "不能为空")]
         public string C_TypeLabor { get; set; }
         [Display(Name = "最近办事处")]

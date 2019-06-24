@@ -42,5 +42,27 @@ namespace BLL
         {
             return dal.GetJobList();
         }
+        public List<ManageJob> GetManege(int selectId)
+        {
+            return dal.GetManege(selectId);
+        }
+        /// <summary>
+        /// 审核
+        /// </summary>
+        /// <param name="p_id"></param>
+        /// <returns></returns>
+        public int PutPass(ManageJob manageJob)
+        {
+            return dal.PutPass(manageJob);
+        }
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="d_id"></param>
+        /// <returns></returns>
+        public int DeleteMa(int d_id)
+        {
+            return dal.DeleteMa(d_id);
+        }
     }
 }

@@ -27,12 +27,19 @@ namespace BLL
             return dal.GetLogin(name, pwd);
         }
 
-        /// <summary>
-        /// 注册
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        public int Register(UserLogin user)
+        //判断权限
+        public int GetLogins(string name)
+        {
+            return dal.GetLogins(name);
+        }
+
+
+            /// <summary>
+            /// 注册
+            /// </summary>
+            /// <param name="user"></param>
+            /// <returns></returns>
+            public int Register(UserLogin user)
         {
             return dal.Register(user);
         }

@@ -46,5 +46,26 @@ namespace BLL
         {
             return dal.AddManageJob(job);
         }
+
+        /// <summary>
+        /// 反添简历信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Resumes SelectResumes(int id)
+        {
+            return dal.SelectResumes(id);
+        }
+
+        /// <summary>
+        /// 修改简历信息
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
+        public int UpdateResumes(Resumes res)
+        {
+            return dal.UpdateResumes(res);
+        }
+
     }
 }

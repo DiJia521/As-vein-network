@@ -20,8 +20,10 @@
     <link href="~/assets/css/owl.theme.default.min.css" rel="stylesheet" />
     <link href="~/assets/css/responsive.css" rel="stylesheet" />
     <link href="~/assets/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery1.42.min.js"></script>
     <script src="~/assets/js/jquery-3.1.1.js"></script>
     <script src="~/assets/js/bootsnav.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
 </head>
 <body>
     <section class="header-slider-area">
@@ -44,10 +46,10 @@
                                         <p>
                                             此时此刻,非你莫属!
                                         </p>
-                                        <button type="button" class="slide-btn" onclick="FaBu()">
+                                        <button type="button" id="Post" class="slide-btn" onclick="FaBu()">
                                             发布招聘信息
                                         </button>
-                                        <button type="button" class="slide-btn" onclick="SouSuo()">
+                                        <button type="button" id="browse" class="slide-btn" onclick="SouSuo()">
                                             招聘信息搜索
                                         </button>
                                     </div>
@@ -180,10 +182,38 @@
 </body>
 </html>
 <script>
+    admin = $.cookie("admin");
     function FaBu() {
-        location.href = '/CompanyManage/AddCompany';
+        if (admin == null) {
+            alert("请先登录");
+        } else {
+            location.href = '/CompanyManage/AddCompany';
+        }
     }
     function SouSuo() {
         location.href = '/AsveinNetwork/XinJobsearch';
     }
+
+    $(function () {
+        if (admin == null) {
+
+        }
+        else {
+            $.ajax({
+                url: "https://localhost:44370/api/login/GetLogins/" + admin,
+                type: "get",
+                contentType: "application/json",
+                success: function (data) {
+                    if (data == 1) {
+                        $("#Post").prop("disabled", "disabled");
+                        
+                    }
+                    else if (data == 0) {
+                        $("#browse").prop("disabled", "disabled");
+                    }
+                }
+
+            })
+        }
+    })
 </script>

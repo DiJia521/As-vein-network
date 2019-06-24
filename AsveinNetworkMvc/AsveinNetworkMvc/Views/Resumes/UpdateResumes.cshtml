@@ -1,0 +1,233 @@
+﻿@model AsveinNetworkMvc.Models.Resumes
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Single Job Post</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/MoBan/images/favicon.ico">
+
+    <!-- Google Fonts
+    ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- All css files are included here
+    ============================================ -->
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- This core.css file contents all plugins css file
+    ============================================ -->
+    <link href="~/css/core.css" rel="stylesheet" />
+    <!-- Theme shortcodes/elements style
+    ============================================ -->
+    <link href="~/css/shortcode/shortcodes.css" rel="stylesheet" />
+    <!-- Color Swithcer CSS
+    ============================================ -->
+    <link href="~/css/plugins/color-switcher.css" rel="stylesheet" />
+    <!--  Theme main style
+    ============================================ -->
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- Color CSS
+    ============================================ -->
+    <link href="~/css/plugins/color.css" rel="stylesheet" />
+    <!-- Responsive CSS
+    ============================================ -->
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <!-- Modernizr JS -->
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+</head>
+<body>
+    <!--Breadcrumb Banner Area Start-->
+    <div class="breadcrumb-banner-area pt-94 pb-85 bg-3 bg-opacity-dark-blue-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-text">
+                        <h2 class="text-center text-white uppercase mb-17">修改简历</h2>
+                        <div class="breadcrumb-bar">
+                            <ul class="breadcrumb text-center m-0">
+                                <li class="text-white uppercase ml-15 mr-15"><a href="index.html">Home</a></li>
+                                <li class="text-white uppercase ml-15 mr-15">Resume</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Breadcrumb Banner Area-->
+    <!--Start of Single Job Post Area-->
+    <div class="single-job-post-area pt-70 mb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form asp-action="UpdateResumes" method="post" asp-controller="Resumes" enctype="multipart/form-data">
+                        <div class="single-job-content">
+                            <div class="single-job-form">
+                                <div class="single-info mb-14 fix">
+                                    <input id="Hidden1" type="hidden" asp-for="R_Id" />
+                                    <label asp-for="R_Picture" class="uppercase pull-left m-0">照片</label>
+                                    <div class="form-box fix">
+                                        <input type="file" asp-for="R_Picture">
+                                    </div>
+                                </div>
+                                <div class="single-info pb-14">
+                                    <label asp-for="R_Name" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="f_name" asp-for="R_Name" placeholder="请输入您的姓名">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-job-form">
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Age" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" asp-for="R_Age" id="age" placeholder="请输入您的年龄">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Age" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Address" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="address" asp-for="R_Address" placeholder="Please enter your address">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Address" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Phone" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" asp-for="R_Phone" id="phone" placeholder="Please enter your phone number">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Email" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="email" asp-for="R_Email" placeholder="Please enter your email">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Experience" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="date_to" asp-for="R_Experience" placeholder="Please enter date">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Experience" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Occupation" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="city" asp-for="R_Occupation" placeholder="Please enter your  jobname">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Occupation" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Salary" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="website" asp-for="R_Salary" placeholder="Please enter your monery">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Salary" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-job-form">
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_School" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="school_name" asp-for="R_School" placeholder="Please enter your school name">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_School" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Studyingtime" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="degree" asp-for="R_Studyingtime" placeholder="Please enter your degree">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Studyingtime" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-job-form">
+                                <div class="single-info pb-14">
+                                    <label asp-for="R_Major" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="title" asp-for="R_Major" placeholder="Enter your title">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Major" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14">
+                                    <label asp-for="R_Degree" class="uppercase pull-left m-0"></label>
+                                    <div class="form-box fix">
+                                        <input type="text" id="date_from" asp-for="R_Degree" placeholder="Please enter date">
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Degree" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14 fix">
+                                    <label asp-for="R_WorkExperience" class="uppercase pull-left m-0"></label>
+                                    <div class="desc fix">
+                                        <textarea asp-for="R_WorkExperience" class="fix small textarea" cols="30" rows="10" placeholder="Please enter description"></textarea>
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_WorkExperience" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="single-info mb-14 fix">
+                                    <label asp-for="R_Selfevaluation" class="uppercase pull-left m-0"></label>
+                                    <div class="desc fix">
+                                        <textarea asp-for="R_Selfevaluation" class="fix small textarea" cols="30" rows="10" placeholder="Please enter description"></textarea>
+                                    </div>
+                                    <div class="form-box fix">
+                                        <span asp-validation-for="R_Selfevaluation" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="ml-160 mt-42">
+                                    <input type="submit" value="保存简历" class="button button-medium-box" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

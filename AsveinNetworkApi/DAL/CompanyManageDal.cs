@@ -97,5 +97,61 @@ namespace DAL
             var list = DapperHelper<CompanyManage>.Query(str, null);
             return list;
         }
+        public List<ManageJob> GetManege(int selectId)
+        {
+            List<ManageJob> list = null;
+            try
+            {
+                string str = "select *from ManageJob where M_Pass=@selectId";
+                list = DapperHelper<ManageJob>.Query(str, new { selectId = selectId });
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.ToString());
+            }
+            return list;
+        }
+        /// <summary>
+        /// 审核
+        /// </summary>
+        /// <param name="p_id"></param>
+        /// <returns></returns>
+        public int PutPass(ManageJob manageJob)
+        {
+            int result = 0;
+            try
+            {
+                //字符串修改
+                string str = "update  ManageJob  set M_Pass=1 where M_Id=@p_id";
+                //调用
+                result = DapperHelper<CompanyManage>.Execute(str, new { p_id = manageJob.M_Id });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+            return result;
+        }
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="d_id"></param>
+        /// <returns></returns>
+        public int DeleteMa(int d_id)
+        {
+            int result = 0;
+            try
+            {
+                //字符串修改
+                string str = "delete from ManageJob where M_Id=@d_id";
+                //调用
+                result = DapperHelper<CompanyManage>.Execute(str, new { d_id = d_id });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+            return result;
+        }
     }
 }

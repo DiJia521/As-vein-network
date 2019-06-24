@@ -56,7 +56,7 @@ namespace AsveinNetworkMvc
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=AsveinNetwork}/{action=Index}/{id?}");
             });
         }
     }

@@ -41,6 +41,13 @@ namespace AsveinNetworkApi.Controllers
             return bll.GetUsers(name);
         }
 
+        //判断权限
+        [HttpGet("GetLogins/{name}")]
+        public int GetLogins(string name)
+        {
+            return bll.GetLogins(name);
+        }
+
         /// <summary>
         /// 根据用户名，密码登录
         /// </summary>

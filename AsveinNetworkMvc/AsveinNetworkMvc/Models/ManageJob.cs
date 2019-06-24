@@ -7,6 +7,7 @@ namespace AsveinNetworkMvc.Models
 {
     public class ManageJob
     {
+        public int M_Id { get; set; }
         /// <summary>
         /// 姓名
         /// </summary>

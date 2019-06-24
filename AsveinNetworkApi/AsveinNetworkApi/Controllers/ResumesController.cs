@@ -60,7 +60,28 @@ namespace AsveinNetworkApi.Controllers
             return bll.AddManageJob(job);
         }
 
+        /// <summary>
+        /// 反添简历信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public Resumes SelectResumes(int id)
+        {
+            return bll.SelectResumes(id);
+        }
 
+
+        /// <summary>
+        /// 修改简历信息
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
+        [HttpPut("UpdateResumes")]
+        public int UpdateResumes(Resumes res)
+        {
+            return bll.UpdateResumes(res);
+        }
 
     }
 }

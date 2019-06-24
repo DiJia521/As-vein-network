@@ -11,6 +11,7 @@ namespace DAL
 {
     public class LoginDal
     {
+        //用户名重复判断
         public bool GetUsers(string name)
         {
             List<UserLogin> list = null;
@@ -29,11 +30,34 @@ namespace DAL
             }
             catch (Exception e)
             {
-                Logger.Error("查询错误");
+                Logger.Error(e.TargetSite.ToString());
             }
 
             return result;
         }
+
+        //判断权限
+        public int GetLogins(string name)
+        {
+            List<UserLogin> list = null;
+            int result = 0;
+            try
+            {
+                string str = "select U_Impower from UserLogin where U_Name = @U_Name";
+                var args = new DynamicParameters();
+                args.Add("@U_Name", name);
+
+                list = DapperHelper<UserLogin>.Query(str, args);
+                result = list[0].U_Impower;
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e.TargetSite.ToString());
+            }
+
+            return result;
+        }
+
 
         /// <summary>
         /// 根据用户名，密码登录
@@ -56,7 +80,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                Logger.Error("登录失败");
+                Logger.Error(e.TargetSite.ToString());
             }
 
             return list;
@@ -82,7 +106,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                Logger.Error("注册失败");
+                Logger.Error(e.TargetSite.ToString());
             }
 
             return result;
