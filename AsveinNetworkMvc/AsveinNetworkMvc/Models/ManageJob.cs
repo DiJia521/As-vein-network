@@ -23,7 +23,7 @@ namespace AsveinNetworkMvc.Models
         /// <summary>
         /// 邮箱地址
         /// </summary>
-        public string R_EmailAddress { get; set; }
+        public string R_Address { get; set; }
         /// <summary>
         /// 公司名称
         /// </summary>

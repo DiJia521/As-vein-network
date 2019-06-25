@@ -40,8 +40,9 @@
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a id="Company" href="/CompanyManage/GetManageJob" >公司用户</a></li>
-                                <li><a href="#" onclick="show()">个人简历</a></li>
+                                <li><a id="Company" onclick="CompantShow()">公司信息</a></li>
+                                <li><a id="addCompany" href="/Company/InsertAddCompany">编写公司信息</a></li>
+                                <li><a id="Jianli" href="#" onclick="show()">个人简历</a></li>
                                 <li><a id="User" href="/Resumes/AddResumes">创建个人简历</a></li>
                                 <li><a id="user" href="/Login/Login">登录/注册</a></li>
                                 <li><a href="/Login/Login" id="Eite" onclick="Eite()"></a></li>
@@ -80,6 +81,10 @@
         $.removeCookie("admin", { path: '/' });
     }
 
+    function CompantShow() {
+        location.href = "/Company/CompanyIndex?phone=" + admin;
+    }
+
     function show() {
         var People = new Object();
 
@@ -106,11 +111,15 @@
                 success: function (data) {
                     if (data == 1) {
                         $("#Company").hide();
+                        $("#addCompany").hide();
                         $("#User").show();
+                        $("#Jianli").show();
                     }
                     else if (data == 0) {
                         $("#User").hide();
+                        $("#Jianli").hide();
                         $("#Company").show();
+                        $("#addCompany").show();
                     }
                 }
 

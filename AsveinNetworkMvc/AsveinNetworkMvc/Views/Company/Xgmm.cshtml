@@ -1,0 +1,136 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>密码修改</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/js/jquery1.42.min.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    <link href="~/css/Czmm.css" rel="stylesheet" />
+    <script src="~/js/md5.js"></script>
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/MoBan/images/favicon.ico">
+
+    <!-- Google Fonts
+    ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- All css files are included here
+    ============================================ -->
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link href="~/MoBan/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- This core.css file contents all plugins css file
+    ============================================ -->
+    <link href="~/MoBan/css/core.css" rel="stylesheet" />
+    <!-- Theme shortcodes/elements style
+    ============================================ -->
+    <link href="~/MoBan/css/shortcode/shortcodes.css" rel="stylesheet" />
+    <!-- Color Swithcer CSS
+    ============================================ -->
+    <link href="~/MoBan/css/plugins/color-switcher.css" rel="stylesheet" />
+    <!--  Theme main style
+    ============================================ -->
+    <link href="~/MoBan/css/style.css" rel="stylesheet" />
+    <!-- Color CSS
+    ============================================ -->
+    <link href="~/MoBan/css/plugins/color.css" rel="stylesheet" />
+    <!-- Responsive CSS
+    ============================================ -->
+    <link href="~/MoBan/css/responsive.css" rel="stylesheet" />
+    <!-- Modernizr JS -->
+    <script src="~/MoBan/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--Breadcrumb Banner Area Start-->
+    <div class="breadcrumb-banner-area pt-94 pb-85 bg-3 bg-opacity-dark-blue-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-text">
+                        <h2 class="text-center text-white uppercase mb-17">密码修改</h2>
+                        <div class="breadcrumb-bar">
+                            <ul class="breadcrumb text-center m-0">
+                                <li class="text-white uppercase ml-15 mr-15"><a href="index.html">Home</a></li>
+                                <li class="text-white uppercase ml-15 mr-15">Upt Password</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Breadcrumb Banner Area-->
+    <div class="single-job-post-area pt-70 mb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form asp-action="AddResumes" asp-controller="Resumes" method="post" enctype="multipart/form-data">
+                        <div class="single-job-content">
+                            <div class="single-job-form">
+                                <div class="single-info pb-14">
+                                    <label class="uppercase pull-left m-0">新密码：</label>
+                                    <div class="form-box fix">
+                                        <input style="float:left" type="password" id="f_mm" placeholder="请输入您的新密码">
+                                        <span style="float:right; padding-right:-50px" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="single-info pb-14">
+                                    <label class="uppercase pull-left m-0">确认密码：</label>
+                                    <div class="form-box fix">
+                                        <input style="float:left" type="password" id="f_newmm" placeholder="请再次输入您的密码">
+                                        <span style="float:right; padding-right:-50px" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="ml-160 mt-42">
+                                    <input type="button" value="修改密码" class="button button-medium-box" onclick="xgmm()" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function xgmm() {
+        var name = $.cookie("admin");
+        var pwd = $("#f_mm").val();
+        var pwd2 = $("#f_newmm").val();
+
+        var user = new Object();
+        user.U_Name = name;
+        user.U_Pwd = hex_md5(pwd);;
+        if (pwd == pwd2) {
+
+            $.ajax({
+                url: "https://localhost:44370/api/login/Czmm",
+                data: JSON.stringify(user),
+                type: "put",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result > 0) {
+                        alert("修改成功");
+                        location.href = "/AsveinNetwork/index";
+                    }
+                }
+            })
+        } else {
+            alert("两次输入不一致！");
+        }
+    }
+</script>

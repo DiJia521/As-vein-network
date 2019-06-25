@@ -71,7 +71,7 @@ namespace AsveinNetworkMvc.Controllers
             job.R_Name = rName;
             job.R_Phone = rPhone;
             job.R_Age = Convert.ToInt32(rAge);
-            job.R_EmailAddress = rAddress;
+            job.R_Address = rAddress;
             job.M_Pass = 0;
             job.C_TypeLabor = rSalary;
 
@@ -99,15 +99,14 @@ namespace AsveinNetworkMvc.Controllers
                 if (result != "失败")
                 {
 
-                    Response.Redirect("/CompanyManage/SeadEmail?email=" + company.C_EmailAddress + "&name=" + company.C_Name + "&jobr=" + company.C_JobRequirements);
+                    Response.Redirect("/CompanyManage/SeadEmail?email=" + company.C_EmailAddress + "&name=" + company.C_Name);
                 }
             }
             return View();
         }
-        public IActionResult SeadEmail(string email, string name, string jobr)
+        public IActionResult SeadEmail(string email, string name)
         {
             ViewBag.email = email;
-            ViewBag.job = jobr;
             System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
             client.Host = "smtp.163.com";//使用163的SMTP服务器发送邮件
             client.UseDefaultCredentials = true;
@@ -142,19 +141,23 @@ namespace AsveinNetworkMvc.Controllers
 
             return View();
         }
-        public int seleid;
+       
+        public int _page=1;
         [HttpGet]
         public IActionResult GetManageJob(int page = 1, int pageSize = 10)
         {
             string str = Sender("get", "/api/ManageJob?selectId=" + 0, null);
             List<ManageJob> list = JsonConvert.DeserializeObject<List<ManageJob>>(str);
             ViewData["page"] = page;
+            _page = page;
             return View(list.ToPagedList(page, pageSize));
         }
+        public int seleid;
         [HttpPost]
         public IActionResult GetManageJob(int selectId = 0, int page = 1, int pageSize = 10)
         {
             seleid = selectId;
+            _page = page;
             string str = Sender("get", "/api/ManageJob?selectId=" + selectId, null);
             List<ManageJob> list = JsonConvert.DeserializeObject<List<ManageJob>>(str);
             //分页功能
@@ -203,14 +206,14 @@ namespace AsveinNetworkMvc.Controllers
                 }
 
             }
-            GetManageJob(seleid, 1, 10);
+            Response.Redirect("/CompanyManage/GetManageJob?selectId=" + seleid + "&page=" + _page + "&pageSize=" + 10);
         }
         public void DeleteMa(int id)
         {
             string str = Sender("delete", "/api/ManageJob?d_id=" + id, null);
             if (int.Parse(str) > 0)
             {
-                GetManageJob(seleid, 1, 10);
+                Response.Redirect("/CompanyManage/GetManageJob?selectId=" + seleid + "&page=" +_page+"&pageSize="+10);
             }
 
         }

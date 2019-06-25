@@ -23,7 +23,8 @@ namespace DAL
             catch (Exception e)
             {
                 Logger.Error("404");
-            }            
+            }
+            
             return str;
         }
 
@@ -89,7 +90,7 @@ namespace DAL
                 R_Name = job.R_Name,
                 R_Phone = job.R_Phone,
                 R_Age = job.R_Age,
-                R_EmailAddress = job.R_EmailAddress,
+                R_EmailAddress = job.R_Address,
                 C_CompanyName = job.C_CompanyName,
                 C_AvailablePositions = job.C_AvailablePositions,
                 C_TypeLabor = job.C_TypeLabor,

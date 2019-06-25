@@ -73,7 +73,7 @@
                         @Html.DisplayFor(modelItem => item.R_Age)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.R_EmailAddress)
+                        @Html.DisplayFor(modelItem => item.R_Address)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.C_CompanyName)
@@ -86,14 +86,14 @@
                     </td>
                     @if (item.M_Pass == 0)
                     {
-                        <td> @Html.ActionLink("未审核", "UpdatePass", new { id = item.M_Id, name = item.R_Name, comName = item.C_CompanyName, item.R_EmailAddress, item.C_CompanyAddress })</td>
+                        <td> @Html.ActionLink("未审核", "UpdatePass", new { id = item.M_Id, name = item.R_Name, comName = item.C_CompanyName, email=item.R_Address, adress=item.C_CompanyAddress })</td>
                     }
                     else
                     {
                         <td>已通过</td>
                     }
                     <td>
-                        <a asp-action="Create">详情</a>
+                        @Html.ActionLink("详情", "ShowResumes","Resumes",new  {name=item.R_Name })
                         @Html.ActionLink("移除", "DeleteMa", new { id = item.M_Id })
                     </td>
                 </tr>
@@ -101,8 +101,15 @@
         </tbody>
         <tfoot>
             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td class="text-muted" colspan="4">
-                    每页 @Model.PageSize 条记录，本页有 @Model.Count 条记录,共有 @Model.TotalItemCount 条记录。第 @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) 页，共 @Model.PageCount 页。
+                    本页有 @Model.Count 条记录,共有 @Model.TotalItemCount 条记录。第 @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) 页，共 @Model.PageCount 页。
                     @*这个条件表达式的目的是防止出现 记录为0的情况，会出现 总页数为0，而当前是第1页的情况。*@
                 </td>
             </tr>
