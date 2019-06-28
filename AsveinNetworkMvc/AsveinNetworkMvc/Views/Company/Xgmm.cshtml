@@ -77,6 +77,15 @@
                     <form asp-action="AddResumes" asp-controller="Resumes" method="post" enctype="multipart/form-data">
                         <div class="single-job-content">
                             <div class="single-job-form">
+
+                                <div class="single-info pb-14">
+                                    <label class="uppercase pull-left m-0">原密码：</label>
+                                    <div class="form-box fix">
+                                        <input style="float:left" type="password" id="f_mm0" placeholder="请输入您的原始密码">
+                                        <span style="float:right; padding-right:-50px" class="text-danger"></span>
+                                    </div>
+                                </div>
+
                                 <div class="single-info pb-14">
                                     <label class="uppercase pull-left m-0">新密码：</label>
                                     <div class="form-box fix">

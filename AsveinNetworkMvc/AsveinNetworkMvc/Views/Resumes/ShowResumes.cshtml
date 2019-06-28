@@ -4,9 +4,7 @@
     Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
+
 <div class="badge_details_wrap cover_detail">
     <div class="down_cover">
 
@@ -347,8 +345,8 @@
 
                 @foreach (var item in Model)
                 {
-                    @Html.ActionLink("修改", "UpdateResumes", new { @id = item.R_Id })
-                    <a href="/Company/Xgmm" style="float:right">修改密码</a>
+                    @Html.ActionLink("修改", "UpdateResumes", new { @id = item.R_Id },new { @name="Upt" })
+                    <a id="Xgmm" href="/Company/Xgmm" style="float:right">修改密码</a>
                     <table class="resume_box">
                         <tbody>
                             <tr>

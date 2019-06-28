@@ -16,9 +16,6 @@
     <!--图标样式-->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css'>
 
-
-
-
     <script src="~/js/jquery1.42.min.js"></script>
     <link href="~/css/show.css" rel="stylesheet" />
     <script src="~/js/md5.js"></script>
@@ -27,7 +24,6 @@
     <script src="~/js/jquery.cookie.js"></script>
     <style>
         html, body {
-            
             background-image: url('../../wwwroot/Images/3.jpg');
         }
     </style>
@@ -40,14 +36,14 @@
             <form>
                 <h1>注册</h1>
                 @*<div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <span>第三方账号注册</span>*@
-                <input id="txtPhone"  name="Phonenum" type="text" placeholder="手机号码"  onblur="oBlur_1($('#txtPhone').val())" onfocus="oFocus_1()" />
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>第三方账号注册</span>*@
+                <input id="txtPhone" name="Phonenum" type="text" placeholder="手机号码" onblur="oBlur_1($('#txtPhone').val())" onfocus="oFocus_1()" />
                 <span id="remind_1" style="height:20px;width:200px;color:red"></span>
-                <input type="password" name="Pwd" placeholder="密码" id="Password" onblur="oBlur_2($('#Password').val())" onfocus="oFocus_2()"  />
+                <input type="password" name="Pwd" placeholder="密码" id="Password" onblur="oBlur_2($('#Password').val())" onfocus="oFocus_2()" />
                 <span id="remind_2" style="height:20px;width:150px;color:red"></span>
                 <select id="Impower" style="background-color: #eee;border: none;padding: 12px 15px;margin: 8px 0;width: 100%;">
                     <option value="0">公司用户</option>
@@ -62,18 +58,18 @@
             <form>
                 <h1>登录</h1>
                 @*<div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <span>第三方账号登录</span>*@
-                <input type="text" name="Phonenum" placeholder="手机号码" id="txtName"  onblur="oBlur_4($('#txtName').val())" onfocus="oFocus_4()" />
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>第三方账号登录</span>*@
+                <input type="text" name="Phonenum" placeholder="手机号码" id="txtName" onblur="oBlur_4($('#txtName').val())" onfocus="oFocus_4()" />
                 <span id="remind_4" style="height:20px;width:150px;color:red"></span>
                 <input type="password" name="Pwd" placeholder="密码" id="txtPwd" onblur="oBlur_5($('#txtPwd').val())" onfocus="oFocus_5()" />
                 <span id="remind_5" style="height:20px;width:150px;color:red"></span>
-                <input id="TencentCaptcha" type="button" data-appid="2091405832" data-cbfn="callback" value="验证" />
                 <a href="/Login/Czmm1">忘记密码？</a>
-                <input class="Login" type="button" value="登录" onclick="Login()" />
+                <input id="TencentCaptcha" type="button" data-appid="2091405832" data-cbfn="callback" class="Login" value="登录" />
+
             </form>
         </div>
         <div class="overlay-container">
@@ -92,10 +88,6 @@
         </div>
     </div>
 
-
-
-
-
     <script src="~/js/show.js"></script>
 
 
@@ -111,10 +103,31 @@
         // res（用户主动关闭验证码）= {ret: 2, ticket: null}
         // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
         if (res.ret === 0) {   // 票据
+            var name = $("#txtName").val();
+            if (name != "") {
+                $.cookie("admin", name, {/* expires: 7,*/ path: '/' });
+            }
+            var pwd = hex_md5($("#txtPwd").val());
+
+            $.ajax({
+                url: "https://localhost:44370/api/login/GetLogin",
+                data: { "userName": name, "pwd": pwd },
+                type: "get",
+                contentType: "application/json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        location.href = "/AsveinNetwork/Index";
+                    }
+                    else {
+                        alert("用户名或密码错误,请重新输入");
+                        location.href = "/Login/Login"
+                    }
+                }
+            })
         }
     }
 
-    
+
 
     //登录功能
     function Login() {
@@ -123,7 +136,7 @@
             $.cookie("admin", name, {/* expires: 7,*/ path: '/' });
         }
         var pwd = hex_md5($("#txtPwd").val());
-         
+
         $.ajax({
             url: "https://localhost:44370/api/login/GetLogin",
             data: { "userName": name, "pwd": pwd },
@@ -131,7 +144,6 @@
             contentType: "application/json",
             success: function (data) {
                 if (data.length > 0) {
-                    alert("登录成功");
                     location.href = "/AsveinNetwork/Index";
                 }
                 else {
@@ -185,35 +197,44 @@
 
     //注册
     function Register() {
-        if (s == $("#verCode").val()) {
+        name = $("#txtPhone").val();
+        pwd = hex_md5($("#Password").val());
+        impower = $("#Impower").val();
+        if (name != "" && pwd != "") {
+            if (s == $("#verCode").val()) {
 
-            var obj = new Object();
-            obj.U_Name = $("#txtPhone").val();
-            obj.U_Pwd = hex_md5($("#Password").val());
-            obj.U_Impower = $("#Impower").val();
+                var obj = new Object();
+                obj.U_Name = name;
+                obj.U_Pwd = pwd;
+                obj.U_Impower = impower;
 
-            $.ajax({
-                url: "https://localhost:44370/api/login/PostRegister",
-                data: JSON.stringify(obj),
-                type: "post",
-                contentType: 'application/json;',
-                //contentType: "application/x-www-form-urlencoded",
-                //accepts: "application/x-www-form-urlencoded",
-                //contentType: "application/x-www-form-urlencoded",
-                success: function (data) {
-                    if (data > 0) {
-                        alert("注册成功");
+                $.ajax({
+                    url: "https://localhost:44370/api/login/PostRegister",
+                    data: JSON.stringify(obj),
+                    type: "post",
+                    contentType: 'application/json;',
+                    //contentType: "application/x-www-form-urlencoded",
+                    //accepts: "application/x-www-form-urlencoded",
+                    //contentType: "application/x-www-form-urlencoded",
+                    success: function (data) {
+                        if (data > 0) {
+                            alert("注册成功");
+                            location.href = "/Login/Login"
+                        }
+                        else {
+                            alert("失败,请重新注册");
+                        }
                     }
-                    else {
-                        alert("失败,请重新注册");
-                    }
-                }
 
-            })
+                })
+            }
+            else {
+                $("#verCode").empty();
+                alert("验证码输入有误,请核对后再次填写！");
+            }
         }
         else {
-            $("#verCode").empty();
-            alert("验证码输入有误,请核对后再次填写！");
+            alert("请输入信息");
         }
     }
 </script>

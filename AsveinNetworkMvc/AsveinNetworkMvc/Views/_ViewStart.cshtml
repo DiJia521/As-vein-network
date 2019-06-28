@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>As vein network</title>
+    <title>职脉网 -- 让你的高薪之路越来越稳</title>
     <link href="~/assets/css/animate.css" rel="stylesheet" />
     <link href="~/assets/css/bootsnav.css" rel="stylesheet" />
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -101,7 +101,10 @@
 
     $(function () {
         if (admin == null) {
-
+            $("#Company").hide();
+            $("#addCompany").hide();
+            $("#User").hide();
+            $("#Jianli").hide();
         }
         else {
             $.ajax({
@@ -114,12 +117,16 @@
                         $("#addCompany").hide();
                         $("#User").show();
                         $("#Jianli").show();
+                        $("[name='Upt'").show();
+                        $("#Xgmm").show();
                     }
                     else if (data == 0) {
                         $("#User").hide();
                         $("#Jianli").hide();
                         $("#Company").show();
                         $("#addCompany").show();
+                        $("[name='Upt'").hide();
+                        $("#Xgmm").hide();
                     }
                 }
 
